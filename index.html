@@ -1,0 +1,1130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Culture Trail (Bharatiya Sanskriti) - Celebrating India's Cultural Diversity</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Hind+Siliguri:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --text-primary-light: #2c3e50;
+      --text-secondary-light: #555555;
+      --bg-primary-light: #f9f7f0;
+      --bg-secondary-light: #f5f0e4;
+      --accent-light: #FF6D24; /* Saffron orange */
+      --accent-secondary-light: #E63728; /* Deeper red */
+      --border-light: #d5dbdb;
+      --gold-light: #d4af37;
+      
+      --text-primary-dark: #f8f9fa;
+      --text-secondary-dark: #adb5bd;
+      --bg-primary-dark: #1a1a2e;
+      --bg-secondary-dark: #16213e;
+      --accent-dark: #FF9933; /* Indian flag saffron */
+      --accent-secondary-dark: #ff7b00;
+      --border-dark: #495057;
+      --gold-dark: #ffd700;
+
+      --color1: #FF9933; /* Saffron - Indian flag */
+      --color2: #FFFFFF; /* White - Indian flag */
+      --color3: #138808; /* Green - Indian flag */
+      --color4: #8D3DAF; /* Purple - for royalty */
+      --color5: #E91E63; /* Pink - for festivals */
+      --color6: #d4af37; /* Gold - for traditions */
+    }
+    
+    body {
+      font-family: 'Poppins', 'Hind Siliguri', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: var(--bg-primary-dark);
+      color: var(--text-primary-dark);
+      transition: all 0.3s ease;
+      line-height: 1.6;
+    }
+    
+    body.light-mode {
+      background-color: var(--bg-primary-light);
+      color: var(--text-primary-light);
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    /* Vibrant Indian Header */
+    header {
+      background-image: 
+        linear-gradient(135deg, rgba(255, 153, 51, 0.8), rgba(230, 55, 40, 0.8)),
+        url('https://images.unsplash.com/photo-1524492412937-b33874b7bdd6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      padding: 100px 0;
+      text-align: center;
+      position: relative;
+      clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+    }
+    
+    .logo {
+      font-size: 4rem;
+      margin-bottom: 10px;
+      font-weight: 800;
+      text-shadow: 3px 3px 0 rgba(0,0,0,0.2);
+      animation: fadeInDown 1s ease;
+      color: var(--gold-dark);
+    }
+    
+    .light-mode .logo {
+      color: var(--gold-light);
+    }
+    
+    .tagline {
+      font-size: 1.8rem;
+      margin-bottom: 30px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      text-shadow: 2px 2px 0 rgba(0,0,0,0.1);
+      animation: fadeIn 1.5s ease;
+    }
+    
+    .header-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    
+    .header-cta {
+      background-color: var(--bg-secondary-dark);
+      color: white;
+      padding: 15px 40px;
+      border: none;
+      border-radius: 50px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 15px rgba(255, 158, 0, 0.4);
+      animation: pulse 2s infinite;
+      text-transform: uppercase;
+      text-decoration: none;
+      display: inline-block;
+      letter-spacing: 1px;
+    }
+    
+    .demo-btn {
+      background-color: transparent;
+      color: white;
+      border: 2px solid white;
+      animation: none;
+      box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+    }
+    
+    .light-mode .header-cta {
+      background-color: var(--accent-light);
+      box-shadow: 0 5px 15px rgba(230, 57, 70, 0.4);
+    }
+    
+    .header-cta:hover {
+      background-color: var(--accent-secondary-dark);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(255, 158, 0, 0.6);
+      animation: none;
+    }
+    
+    .demo-btn:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+      border-color: var(--gold-dark);
+    }
+    
+    .light-mode .header-cta:hover {
+      background-color: var(--accent-secondary-light);
+      box-shadow: 0 8px 20px rgba(230, 57, 70, 0.6);
+    }
+
+    /* Animated Navigation */
+    nav {
+      background-color: var(--bg-primary-dark);
+      padding: 15px 0;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      transition: all 0.3s ease;
+    }
+    
+    .light-mode nav {
+      background-color: var(--bg-primary-light);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .nav-logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: var(--accent-dark);
+      transition: all 0.3s ease;
+    }
+    
+    .light-mode .nav-logo {
+      color: var(--accent-light);
+    }
+    
+    .nav-logo:hover {
+      transform: rotate(-5deg);
+    }
+    
+    .nav-links {
+      display: flex;
+      gap: 25px;
+    }
+    
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text-primary-dark);
+      font-weight: 600;
+      transition: all 0.3s ease;
+      position: relative;
+      padding: 5px 0;
+    }
+    
+    .light-mode .nav-links a {
+      color: var(--text-primary-light);
+    }
+    
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 3px;
+      background-color: var(--accent-dark);
+      transition: width 0.3s ease;
+      border-radius: 3px;
+    }
+    
+    .light-mode .nav-links a::after {
+      background-color: var(--accent-light);
+    }
+    
+    .nav-links a:hover {
+      color: var(--accent-dark);
+    }
+    
+    .light-mode .nav-links a:hover {
+      color: var(--accent-light);
+    }
+    
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+    
+    /* Hamburger Menu for Mobile */
+    .hamburger {
+      display: none;
+      cursor: pointer;
+      background: none;
+      border: none;
+      color: var(--accent-dark);
+      font-size: 1.8rem;
+    }
+    
+    .light-mode .hamburger {
+      color: var(--accent-light);
+    }
+
+    /* Sections with Colorful Accents */
+    .section {
+      padding: 80px 0;
+      position: relative;
+    }
+    
+    .section-alt {
+      background-color: var(--bg-secondary-dark);
+      clip-path: polygon(0 5%, 100% 0, 100% 95%, 0 100%);
+      padding: 100px 0;
+      margin: 50px 0;
+    }
+    
+    .light-mode .section-alt {
+      background-color: var(--bg-secondary-light);
+    }
+    
+    .section-header {
+      text-align: center;
+      margin-bottom: 50px;
+      position: relative;
+    }
+    
+    .section-title {
+      font-size: 2.8rem;
+      margin-bottom: 20px;
+      color: var(--text-primary-dark);
+      position: relative;
+      display: inline-block;
+    }
+    
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 5px;
+      background: linear-gradient(90deg, var(--color1), var(--color3));
+      border-radius: 5px;
+    }
+    
+    .light-mode .section-title {
+      color: var(--text-primary-light);
+    }
+    
+    .section-description {
+      font-size: 1.2rem;
+      max-width: 800px;
+      margin: 0 auto;
+      color: var(--text-secondary-dark);
+    }
+    
+    .light-mode .section-description {
+      color: var(--text-secondary-light);
+    }
+    
+    /* Feature Cards with Hover Effects */
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+    
+    .feature-card {
+      background-color: var(--bg-primary-dark);
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+      transition: all 0.4s ease;
+      position: relative;
+      border-top: 5px solid var(--color1);
+    }
+    
+    .feature-card:nth-child(2) {
+      border-top-color: var(--color2);
+    }
+    
+    .feature-card:nth-child(3) {
+      border-top-color: var(--color3);
+    }
+    
+    .feature-card:nth-child(4) {
+      border-top-color: var(--color4);
+    }
+    
+    .feature-card:nth-child(5) {
+      border-top-color: var(--color5);
+    }
+    
+    .light-mode .feature-card {
+      background-color: var(--bg-primary-light);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+    
+    .feature-card:hover {
+      transform: translateY(-15px) scale(1.02);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+    }
+    
+    .light-mode .feature-card:hover {
+      box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    }
+    
+    .feature-img {
+      height: 220px;
+      width: 100%;
+      object-fit: cover;
+      transition: all 0.5s ease;
+    }
+    
+    .feature-card:hover .feature-img {
+      transform: scale(1.1);
+    }
+    
+    .feature-content {
+      padding: 25px;
+      position: relative;
+      z-index: 1;
+    }
+    
+    .feature-title {
+      font-size: 1.6rem;
+      margin-bottom: 15px;
+      color: var(--text-primary-dark);
+    }
+    
+    .light-mode .feature-title {
+      color: var(--text-primary-light);
+    }
+    
+    .feature-description {
+      color: var(--text-secondary-dark);
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+    
+    .light-mode .feature-description {
+      color: var(--text-secondary-light);
+    }
+    
+    .feature-link {
+      display: inline-flex;
+      align-items: center;
+      color: var(--accent-dark);
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    
+    .light-mode .feature-link {
+      color: var(--accent-light);
+    }
+    
+    .feature-link i {
+      margin-left: 5px;
+      transition: transform 0.3s ease;
+    }
+    
+    .feature-link:hover {
+      color: var(--accent-secondary-dark);
+    }
+    
+    .light-mode .feature-link:hover {
+      color: var(--accent-secondary-light);
+    }
+    
+    .feature-link:hover i {
+      transform: translateX(5px);
+    }
+    
+    /* Vibrant CTA Section */
+    .cta-section {
+      text-align: center;
+      background-image: 
+        linear-gradient(135deg, rgba(19, 136, 8, 0.8), rgba(45, 97, 136, 0.8)),
+        url('https://images.unsplash.com/photo-1587474260584-136574528ed5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80');
+      background-size: cover;
+      background-position: center;
+      padding: 120px 20px;
+      color: white;
+      clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
+      margin: 80px 0;
+    }
+    
+    .cta-title {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 0 rgba(0,0,0,0.2);
+    }
+    
+    .cta-description {
+      font-size: 1.3rem;
+      max-width: 700px;
+      margin: 0 auto 40px;
+      text-shadow: 1px 1px 0 rgba(0,0,0,0.1);
+    }
+    
+    .cta-button {
+      background-color: white;
+      color: var(--color3);
+      padding: 18px 50px;
+      border: none;
+      border-radius: 50px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+    
+    .cta-button i {
+      transition: transform 0.3s ease;
+    }
+    
+    .cta-button:hover {
+      background-color: var(--color3);
+      color: white;
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+    }
+    
+    .cta-button:hover i {
+      transform: rotate(360deg);
+    }
+    
+    /* Final CTA section */
+    .final-cta {
+  text-align: center;
+  padding: 100px 0 50px;  /* Added bottom padding */
+  background: linear-gradient(135deg, rgba(255, 153, 51, 0.15), rgba(19, 136, 8, 0.15));  /* Adjusted transparency */
+  border-radius: 15px;
+  margin: 50px 0 0;  /* Removed bottom margin */
+}
+    
+    .final-cta h2 {
+      font-size: 2.5rem;
+      color: var(--text-primary-dark);
+      margin-bottom: 20px;
+    }
+    
+    .light-mode .final-cta h2 {
+      color: var(--text-primary-light);
+    }
+    
+    .final-cta p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto 30px;
+      color: var(--text-secondary-dark);
+    }
+    
+    .light-mode .final-cta p {
+      color: var(--text-secondary-light);
+    }
+    
+    .final-cta-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    
+    .journey-btn {
+      background-color: var(--accent-dark);
+      color: white;
+      padding: 15px 40px;
+      border-radius: 50px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 15px rgba(255, 158, 0, 0.4);
+      text-transform: uppercase;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .light-mode .journey-btn {
+      background-color: var(--accent-light);
+      box-shadow: 0 5px 15px rgba(230, 57, 70, 0.4);
+    }
+    
+    .journey-btn:hover {
+      background-color: var(--accent-secondary-dark);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(255, 158, 0, 0.6);
+    }
+    
+    .light-mode .journey-btn:hover {
+      background-color: var(--accent-secondary-light);
+      box-shadow: 0 8px 20px rgba(230, 57, 70, 0.6);
+    }
+    
+    /* Side Features Grid */
+    .side-features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      margin-top: 40px;
+    }
+    
+    .side-feature {
+      background-color: var(--bg-primary-dark);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      transition: all 0.3s ease;
+      text-align: center;
+      border-bottom: 4px solid var(--color1);
+    }
+    
+    .side-feature:nth-child(2) {
+      border-bottom-color: var(--color2);
+    }
+    
+    .side-feature:nth-child(3) {
+      border-bottom-color: var(--color3);
+    }
+    
+    .side-feature:nth-child(4) {
+      border-bottom-color: var(--color4);
+    }
+    
+    .side-feature:nth-child(5) {
+      border-bottom-color: var(--color5);
+    }
+    
+    .side-feature:nth-child(6) {
+      border-bottom-color: var(--color6);
+    }
+    
+    .side-feature:nth-child(7) {
+      border-bottom-color: var(--color1);
+    }
+    
+    .side-feature:nth-child(8) {
+      border-bottom-color: var(--color2);
+    }
+    
+    .light-mode .side-feature {
+      background-color: var(--bg-primary-light);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    
+    .side-feature:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+    }
+    
+    .light-mode .side-feature:hover {
+      box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    }
+    
+    .side-feature-icon {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: var(--accent-dark);
+    }
+    
+    .light-mode .side-feature-icon {
+      color: var(--accent-light);
+    }
+    
+    .side-feature-title {
+      font-size: 1.3rem;
+      margin-bottom: 15px;
+      color: var(--text-primary-dark);
+    }
+    
+    .light-mode .side-feature-title {
+      color: var(--text-primary-light);
+    }
+    
+    .side-feature-description {
+      color: var(--text-secondary-dark);
+      font-size: 1rem;
+    }
+    
+    .light-mode .side-feature-description {
+      color: var(--text-secondary-light);
+    }
+    
+    /* Colorful Footer */
+    footer {
+  background-color: var(--bg-secondary-dark);
+  padding: 30px 0;  /* Reduced from 80px 0 30px */
+  color: var(--text-secondary-dark);
+  margin-top: 0;  /* Remove the margin-top that's creating space */
+  clip-path: none;  /* Remove the clip-path that's creating the angled edge */
+}
+    
+    .light-mode footer {
+      background-color: var(--bg-secondary-light);
+      color: var(--text-secondary-light);
+    }
+    
+    .footer-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 40px;
+    }
+    
+    .footer-logo {
+      font-size: 2.2rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+      color: var(--accent-dark);
+    }
+    
+    .light-mode .footer-logo {
+      color: var(--accent-light);
+    }
+    
+    .footer-description {
+      color: var(--text-secondary-dark);
+      margin-bottom: 25px;
+      font-size: 1rem;
+    }
+    
+    .light-mode .footer-description {
+      color: var(--text-secondary-light);
+    }
+    
+    .social-links {
+      display: flex;
+      gap: 15px;
+    }
+    
+    .social-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: var(--bg-primary-dark);
+      color: var(--accent-dark);
+      transition: all 0.3s ease;
+    }
+    
+    .light-mode .social-link {
+      background-color: var(--bg-primary-light);
+      color: var(--accent-light);
+    }
+    
+    .social-link:hover {
+      background-color: var(--accent-dark);
+      color: white;
+      transform: translateY(-3px);
+    }
+    
+    .light-mode .social-link:hover {
+      background-color: var(--accent-light);
+    }
+    
+    .footer-links h3 {
+      font-size: 1.3rem;
+      margin-bottom: 20px;
+      color: var(--text-primary-dark);
+      position: relative;
+      padding-bottom: 10px;
+    }
+    
+    .footer-links h3::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 50px;
+      height: 3px;
+      background-color: var(--accent-dark);
+      border-radius: 3px;
+    }
+    
+    .light-mode .footer-links h3 {
+      color: var(--text-primary-light);
+    }
+    
+    .light-mode .footer-links h3::after {
+      background-color: var(--accent-light);
+    }
+    
+    .footer-links ul {
+      list-style: none;
+      padding: 0;
+    }
+    
+    .footer-links li {
+      margin-bottom: 12px;
+    }
+    
+    .footer-links a {
+      text-decoration: none;
+      color: var(--text-secondary-dark);
+      transition: all 0.3s ease;
+      display: inline-block;
+    }
+    
+    .light-mode .footer-links a {
+      color: var(--text-secondary-light);
+    }
+    
+    .footer-links a:hover {
+      color: var(--accent-dark);
+      transform: translateX(5px);
+    }
+    
+    .light-mode .footer-links a:hover {
+      color: var(--accent-light);
+    }
+    
+    .copyright {
+  margin-top: 30px;  /* Reduced from 50px */
+  text-align: center;
+  padding-top: 20px;  /* Reduced from 30px */
+  border-top: 1px solid rgba(255, 153, 51, 0.3);  /* Using your saffron color with transparency */
+  color: var(--text-secondary-dark);
+  font-size: 0.9rem;
+}
+
+.light-mode .copyright {
+  border-top: 1px solid rgba(255, 153, 51, 0.3);  /* Consistent styling */
+  color: var(--text-secondary-light);
+}
+    
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+    
+    /* Mobile Responsiveness */
+    @media (max-width: 992px) {
+      .logo {
+        font-size: 3rem;
+      }
+      
+      .tagline {
+        font-size: 1.5rem;
+      }
+      
+      .section-title {
+        font-size: 2.2rem;
+      }
+      
+      .cta-title {
+        font-size: 2.5rem;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background-color: var(--bg-primary-dark);
+        flex-direction: column;
+        gap: 0;
+        padding: 20px 0;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+        z-index: 99;
+      }
+      
+      .light-mode .nav-links {
+        background-color: var(--bg-primary-light);
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+      }
+      
+      .nav-links.active {
+        display: flex;
+      }
+      
+      .nav-links a {
+        padding: 15px 20px;
+        border-bottom: 1px solid var(--border-dark);
+      }
+      
+      .light-mode .nav-links a {
+        border-bottom: 1px solid var(--border-light);
+      }
+      
+      .hamburger {
+        display: block;
+      }
+      
+      .section-alt {
+        clip-path: polygon(0 3%, 100% 0, 100% 97%, 0 100%);
+      }
+      
+      .cta-section {
+        clip-path: polygon(0 5%, 100% 0, 100% 95%, 0 100%);
+      }
+      
+      footer {
+        clip-path: polygon(0 3%, 100% 0, 100% 100%, 0 100%);
+      }
+      
+      .header-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .final-cta-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+    
+    @media (max-width: 576px) {
+      .logo {
+        font-size: 2.5rem;
+      }
+      
+      .tagline {
+        font-size: 1.2rem;
+      }
+      
+      .header-cta {
+        padding: 12px 30px;
+        font-size: 1rem;
+      }
+      
+      .section-title {
+        font-size: 1.8rem;
+      }
+      
+      .section-description {
+        font-size: 1rem;
+      }
+      
+      .cta-title {
+        font-size: 2rem;
+      }
+      
+      .cta-description {
+        font-size: 1.1rem;
+      }
+      
+      .cta-button {
+        padding: 15px 40px;
+        font-size: 1rem;
+      }
+      
+      .feature-title {
+        font-size: 1.4rem;
+      }
+      
+      .final-cta h2 {
+        font-size: 2rem;
+      }
+      
+      .final-cta p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+    <!-- Vibrant Header With Two Buttons -->
+    <header>
+      <div class="container">
+        <h1 class="logo">Culture Trail</h1>
+        <p class="tagline">Embark on a journey to discover the rich tapestry of Indian cultural heritage</p>
+        <div class="header-buttons">
+          <a href="#features" class="header-cta">Get Started</a>
+          <a href="demo.html" class="header-cta demo-btn">View Demo</a>
+        </div>
+      </div>
+    </header>
+  
+    <!-- Navigation Bar -->
+    <nav>
+      <div class="container nav-container">
+        <div class="nav-logo">Culture Trail</div>
+        <div class="nav-links">
+          <a href="#features">Features</a>
+          <a href="#about">About</a>
+          <a href="#explore">Explore</a>
+          <a href="#testimonials">Testimonials</a>
+          <a href="questionaire.html">Cultural Journey</a>
+        </div>
+        <button class="hamburger">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </nav>
+  
+    <!-- Features Section -->
+    <section id="features" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Discover Cultural Experiences</h2>
+          <p class="section-description">Dive into India's diverse cultural heritage through interactive journeys, personalized recommendations, and immersive experiences.</p>
+        </div>
+        <div class="features">
+          <div class="feature-card">
+            <img src="https://images.unsplash.com/photo-1551918120-9739cb430c6d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80" alt="Feature" class="feature-img">
+            <div class="feature-content">
+              <h3 class="feature-title">Personalized Cultural Routes</h3>
+              <p class="feature-description">Discover cultural experiences tailored to your interests and preferences through our intelligent recommendation system.</p>
+              <a href="#" class="feature-link">Learn more <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+          <div class="feature-card">
+            <img src="https://images.unsplash.com/photo-1604871000636-074fa5117945?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80" alt="Feature" class="feature-img">
+            <div class="feature-content">
+              <h3 class="feature-title">Traditional Art & Craft</h3>
+              <p class="feature-description">Explore India's rich artistic traditions through virtual galleries, artisan stories, and guided craft experiences.</p>
+              <a href="#" class="feature-link">Learn more <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+          <div class="feature-card">
+            <img src="https://images.unsplash.com/photo-1561361513-2d000a50f0dc?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80" alt="Feature" class="feature-img">
+            <div class="feature-content">
+              <h3 class="feature-title">Festival & Celebrations</h3>
+              <p class="feature-description">Experience the vibrant festivals of India with cultural contexts, traditions, and community connections.</p>
+              <a href="#" class="feature-link">Learn more <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <!-- About Section -->
+    <section id="about" class="section-alt">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">About Culture Trail</h2>
+          <p class="section-description">Our mission is to preserve and promote India's rich cultural heritage while making it accessible to everyone.</p>
+        </div>
+        <div class="side-features">
+          <div class="side-feature">
+            <i class="fas fa-globe-asia side-feature-icon"></i>
+            <h3 class="side-feature-title">Cultural Diversity</h3>
+            <p class="side-feature-description">Representing the rich tapestry of India's regional cultural variations.</p>
+          </div>
+          <div class="side-feature">
+            <i class="fas fa-hiking side-feature-icon"></i>
+            <h3 class="side-feature-title">Immersive Journeys</h3>
+            <p class="side-feature-description">Creating engaging pathways through India's heritage landscapes.</p>
+          </div>
+          <div class="side-feature">
+            <i class="fas fa-hands side-feature-icon"></i>
+            <h3 class="side-feature-title">Artisan Support</h3>
+            <p class="side-feature-description">Connecting traditional craftspeople with global audiences.</p>
+          </div>
+          <div class="side-feature">
+            <i class="fas fa-book-open side-feature-icon"></i>
+            <h3 class="side-feature-title">Knowledge Preservation</h3>
+            <p class="side-feature-description">Documenting oral traditions and intangible cultural heritage.</p>
+          </div>
+          <div class="side-feature">
+            <i class="fas fa-users side-feature-icon"></i>
+            <h3 class="side-feature-title">Community Building</h3>
+            <p class="side-feature-description">Creating networks of cultural enthusiasts and practitioners.</p>
+          </div>
+          <div class="side-feature">
+            <i class="fas fa-lightbulb side-feature-icon"></i>
+            <h3 class="side-feature-title">Innovation & Tradition</h3>
+            <p class="side-feature-description">Bridging ancient wisdom with contemporary relevance.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <!-- Explore Section -->
+    <section id="explore" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Explore Cultural Dimensions</h2>
+          <p class="section-description">Dive deep into the various facets of Indian cultural heritage through our curated collections.</p>
+        </div>
+        <div class="features">
+          <div class="feature-card">
+            <img src="https://images.unsplash.com/photo-1593693411515-c20261bcad6e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80" alt="Feature" class="feature-img">
+            <div class="feature-content">
+              <h3 class="feature-title">Sacred Architecture</h3>
+              <p class="feature-description">Explore the magnificent temples, mosques, churches, and other spiritual spaces that define India's architectural landscape.</p>
+              <a href="#" class="feature-link">Discover more <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+          <div class="feature-card">
+            <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80" alt="Feature" class="feature-img">
+            <div class="feature-content">
+              <h3 class="feature-title">Culinary Traditions</h3>
+              <p class="feature-description">Journey through the diverse flavors, cooking techniques, and food rituals that make Indian cuisine a global phenomenon.</p>
+              <a href="#" class="feature-link">Discover more <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+          <div class="feature-card">
+            <img src="https://images.unsplash.com/photo-1503287641878-b9c48edf0049?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80" alt="Feature" class="feature-img">
+            <div class="feature-content">
+              <h3 class="feature-title">Performing Arts</h3>
+              <p class="feature-description">Witness the rhythmic expressions of classical dance forms and musical traditions that have evolved over centuries.</p>
+              <a href="#" class="feature-link">Discover more <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <!-- Final Call to Action -->
+    <section class="final-cta">
+      <div class="container">
+        <h2>Ready to Begin Your Cultural Journey?</h2>
+        <p>Take our personalized questionnaire to discover cultural experiences tailored just for you, or explore our curated collections to dive right in.</p>
+        <div class="final-cta-buttons">
+          <a href="qs.html" class="journey-btn"><i class="fas fa-map-marked-alt"></i> Start Your Culture Journey</a>
+          <a href="#explore" class="journey-btn"><i class="fas fa-compass"></i> Explore Collections</a>
+        </div>
+      </div>
+    </section>
+  
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="copyright">
+          &copy; 2025 Culture Trail (Bharatiya Sanskriti). All rights reserved.
+        </div>
+      </div>
+    </footer>
+  
+    <script>
+      // Toggle mobile menu
+      const hamburger = document.querySelector('.hamburger');
+      const navLinks = document.querySelector('.nav-links');
+      
+      hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+      });
+      
+      // Close menu when clicking outside
+      document.addEventListener('click', (event) => {
+        if (!event.target.closest('.nav-container')) {
+          navLinks.classList.remove('active');
+        }
+      });
+      
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          
+          document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+          });
+          
+          // Close mobile menu after clicking
+          navLinks.classList.remove('active');
+        });
+      });
+    </script>
+  </body>
+  </html>
