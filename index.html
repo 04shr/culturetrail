@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Culture Trail (Bharatiya Sanskriti) - Celebrating India's Cultural Diversity</title>
+  <title>Sangama (Bharatiya Sanskriti) - Celebrating India's Cultural Diversity</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Hind+Siliguri:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
@@ -150,7 +150,7 @@
     /* Animated Navigation */
     nav {
       background-color: var(--bg-primary-dark);
-      padding: 15px 0;
+      padding: 6px 0;
       box-shadow: 0 5px 15px rgba(0,0,0,0.3);
       position: sticky;
       top: 0;
@@ -170,7 +170,7 @@
     }
     
     .nav-logo {
-      font-size: 1.8rem;
+      font-size: 1.5rem;
       font-weight: bold;
       color: var(--accent-dark);
       transition: all 0.3s ease;
@@ -192,10 +192,10 @@
     .nav-links a {
       text-decoration: none;
       color: var(--text-primary-dark);
-      font-weight: 600;
+      font-weight: 500;
       transition: all 0.3s ease;
       position: relative;
-      padding: 5px 0;
+      padding: 4px 0;
     }
     
     .light-mode .nav-links a {
@@ -208,7 +208,7 @@
       bottom: 0;
       left: 0;
       width: 0;
-      height: 3px;
+      height: 2.5px;
       background-color: var(--accent-dark);
       transition: width 0.3s ease;
       border-radius: 3px;
@@ -482,9 +482,7 @@
     .final-cta {
   text-align: center;
   padding: 100px 0 50px;  /* Added bottom padding */
-  background: linear-gradient(135deg, rgba(255, 153, 51, 0.15), rgba(19, 136, 8, 0.15));  /* Adjusted transparency */
-  border-radius: 15px;
-  margin: 50px 0 0;  /* Removed bottom margin */
+  background: var(--bg-secondary-dark); /* Adjusted transparency */
 }
     
     .final-cta h2 {
@@ -516,7 +514,7 @@
     }
     
     .journey-btn {
-      background-color: var(--accent-dark);
+      background-color: var(--accent-secondary-light);
       color: white;
       padding: 15px 40px;
       border-radius: 50px;
@@ -524,7 +522,6 @@
       font-weight: bold;
       cursor: pointer;
       transition: all 0.3s ease;
-      box-shadow: 0 5px 15px rgba(255, 158, 0, 0.4);
       text-transform: uppercase;
       text-decoration: none;
       display: inline-flex;
@@ -639,7 +636,7 @@
     
     /* Colorful Footer */
     footer {
-  background-color: var(--bg-secondary-dark);
+  background-color: var(--bg-primary-dark);
   padding: 30px 0;  /* Reduced from 80px 0 30px */
   color: var(--text-secondary-dark);
   margin-top: 0;  /* Remove the margin-top that's creating space */
@@ -929,16 +926,281 @@
         font-size: 1rem;
       }
     }
+
+    /* Add these styles to your CSS section in the <style> tag */
+
+/* Card Slider Styles */
+.card-slider-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  padding: 30px 0; position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 40px 0;
+}
+
+.card-slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  gap: 25px;
+}
+
+.destination-card {
+  width: 280px;
+  height: 420px;
+  background-color: var(--bg-primary-dark);
+  border-radius: 15px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  position: relative;
+  transition: all 0.4s ease;
+}
+
+.light-mode .destination-card {
+  background-color: var(--bg-primary-light);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* Destination image area */
+.destination-image {
+  height: 220px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+/* Number badge */
+.destination-number {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 153, 51, 0.9);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Card content area */
+.destination-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+
+/* Title */
+.destination-content h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: var(--text-primary-dark);
+}
+
+.light-mode .destination-content h3 {
+  color: var(--text-primary-light);
+}
+
+/* Description */
+.destination-content p {
+  color: var(--text-secondary-dark);
+  margin-bottom: 20px;
+  line-height: 1.5;
+  font-size: 0.95rem;
+  flex-grow: 1;
+}
+
+.light-mode .destination-content p {
+  color: var(--text-secondary-light);
+}
+
+/* Explore link */
+.explore-link {
+  color: var(--accent-dark);
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.light-mode .explore-link {
+  color: var(--accent-light);
+}
+
+.explore-link:hover {
+  color: var(--accent-secondary-dark);
+  transform: translateX(4px);
+}
+
+.light-mode .explore-link:hover {
+  color: var(--accent-secondary-light);
+}
+
+.explore-link i {
+  transition: transform 0.3s ease;
+}
+
+
+.explore-link {
+  color: var(--accent-dark);
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  margin-top: auto;
+}
+
+.light-mode .explore-link {
+  color: var(--accent-light);
+}
+
+.explore-link i {
+  transition: transform 0.3s ease;
+}
+
+.explore-link:hover {
+  color: var(--accent-secondary-dark);
+}
+
+.light-mode .explore-link:hover {
+  color: var(--accent-secondary-light);
+}
+
+.explore-link:hover i {
+  transform: translateX(5px);
+}
+
+.slider-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgba(0,0,0,0.6);
+  color: white;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1.2rem;
+  z-index: 10;
+  transition: all 0.3s ease;
+}
+
+.slider-nav-btn:hover {
+  background-color: var(--accent-dark);
+}
+
+.light-mode .slider-nav-btn:hover {
+  background-color: var(--accent-light);
+}
+
+.slider-prev {
+  left: 10px;
+}
+
+.slider-next {
+  right: 10px;
+}
+
+.slider-pagination {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.slider-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--text-secondary-dark);
+  opacity: 0.5;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.light-mode .slider-dot {
+  background-color: var(--text-secondary-light);
+}
+
+.slider-dot.active {
+  opacity: 1;
+  background-color: var(--accent-dark);
+  transform: scale(1.2);
+}
+
+.light-mode .slider-dot.active {
+  background-color: var(--accent-light);
+}
+
+/* Animation for the active card */
+.destination-card.active {
+  transform: scale(1.05);
+  z-index: 5;
+}
+
+/* Make the slider responsive */
+@media (max-width: 768px) {
+  .destination-card {
+    flex: 0 0 280px;
+    height: 420px;
+  }
+  
+  .destination-image {
+    height: 200px;
+  }
+  
+  .slider-nav-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .destination-card {
+    flex: 0 0 260px;
+    height: 400px;
+  }
+  
+  .destination-image {
+    height: 180px;
+  }
+  
+  .slider-nav-btn {
+    width: 35px;
+    height: 35px;
+  }
+}
   </style>
 </head>
 <body>
     <!-- Vibrant Header With Two Buttons -->
     <header>
       <div class="container">
-        <h1 class="logo">Culture Trail</h1>
+        <h1 class="logo">Sangama</h1>
         <p class="tagline">Embark on a journey to discover the rich tapestry of Indian cultural heritage</p>
         <div class="header-buttons">
-          <a href="#features" class="header-cta">Get Started</a>
+          <a href="#contSlider" class="header-cta">Get Started</a>
           <a href="demo.html" class="header-cta demo-btn">View Demo</a>
         </div>
       </div>
@@ -947,19 +1209,130 @@
     <!-- Navigation Bar -->
     <nav>
       <div class="container nav-container">
-        <div class="nav-logo">Culture Trail</div>
+        <div class="nav-logo">Sangama</div>
         <div class="nav-links">
-          <a href="#features">Features</a>
-          <a href="#about">About</a>
           <a href="#explore">Explore</a>
-          <a href="#testimonials">Testimonials</a>
-          <a href="questionaire.html">Cultural Journey</a>
+          <a href="#about">About</a>
+          <a href="#explore">Culture</a>          
+          <a href="qs.html">Yatra AI</a>
         </div>
         <button class="hamburger">
           <i class="fas fa-bars"></i>
         </button>
       </div>
     </nav>
+
+    <!-- Card Slider for Karnataka Destinations -->
+<section class="section">
+  <div  id="contSlider" class="container">
+    <div class="section-header">
+      <h2 class="section-title">Explore India</h2>
+      <p class="section-description">Discover the diverse beauty and cultural heritage of India through these breathtaking destinations</p>
+    </div>
+    
+    <div class="card-slider-container">
+      <div class="card-slider">
+        <!-- Destination Cards -->
+
+        <div class="destination-card">
+          <div class="destination-image" style="background-image: url('images/coorg.png')">
+            <div class="destination-number">1</div>
+          </div>
+          <div class="destination-content">
+            <h3>Coorg</h3>
+            <p>Misty hills and coffee plantations known as the 'Scotland of India' for its breathtaking landscapes.</p>
+            <a href="#" class="explore-link">Explore <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="destination-card">
+          <div class="destination-image" style="background-image: url('images/pondi.png')">
+            <div class="destination-number">2</div>
+          </div>
+          <div class="destination-content">
+            <h3>Pondicherry</h3>
+          <p>Ancient ruins of the Vijayanagara Empire, a UNESCO World Heritage Site with stunning temple complexes.</p>
+            <a href="#" class="explore-link">Explore <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+        
+        <div class="destination-card">
+          <div class="destination-image" style="background-image: url('images/rajasthan.jpg')">
+            <div class="destination-number">3</div>
+          </div>
+          <div class="destination-content">
+            <h3>Rajasthan</h3>
+            <p>The second-highest plunge waterfall in India, where the Sharavathi River cascades from 253 meters.</p>
+            <a href="#" class="explore-link">Explore <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+        
+        <div class="destination-card">
+          <div class="destination-image" style="background-image: url('images/jaipur.jpg')">
+            <div class="destination-number">4</div>
+          </div>
+          <div class="destination-content">
+            <h3>Jaipur</h3>
+            <p>A magnificent example of Indo-Saracenic architecture and one of the most visited attractions in India.</p>
+            <a href="#" class="explore-link">Explore <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+        
+        <div class="destination-card">
+          <div class="destination-image" style="background-image: url('images/marine\ drive.jpg')">
+            <div class="destination-number">5</div>
+          </div>
+          <div class="destination-content">
+            <h3>Marine drive</h3>
+            <p>Ancient Hindu and Jain temples carved out of sandstone cliffs dating back to the 6th century.</p>
+            <a href="#" class="explore-link">Explore <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+        
+        <div class="destination-card">
+          <div class="destination-image" style="background-image: url('images/rishikesh.jpg')">
+            <div class="destination-number">6</div>
+          </div>
+          <div class="destination-content">
+            <h3>Rishikesh</h3>
+            <p>Twin temple towns showcasing the exquisite Hoysala architecture with intricate stone carvings.</p>
+            <a href="#" class="explore-link">Explore <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+        
+        <div class="destination-card">
+          <div class="destination-image" style="background-image: url('images/alleppey.jpg')">
+            <div class="destination-number">7</div>
+          </div>
+          <div class="destination-content">
+            <h3>Alleppey</h3>
+            <p>A tranquil beach destination with pristine shores and a blend of spiritual heritage and coastal charm.</p>
+            <a href="#" class="explore-link">Explore <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Slider Navigation -->
+      <button class="slider-nav-btn slider-prev" aria-label="Previous destination">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      <button class="slider-nav-btn slider-next" aria-label="Next destination">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+    </div>
+    
+    <!-- Slider Pagination Dots -->
+    <div class="slider-pagination">
+      <div class="slider-dot active"></div>
+      <div class="slider-dot"></div>
+      <div class="slider-dot"></div>
+      <div class="slider-dot"></div>
+      <div class="slider-dot"></div>
+      <div class="slider-dot"></div>
+      <div class="slider-dot"></div>
+    </div>
+  </div>
+</section>
   
     <!-- Features Section -->
     <section id="features" class="section">
@@ -1001,7 +1374,7 @@
     <section id="about" class="section-alt">
       <div class="container">
         <div class="section-header">
-          <h2 class="section-title">About Culture Trail</h2>
+          <h2 class="section-title">About Sangama</h2>
           <p class="section-description">Our mission is to preserve and promote India's rich cultural heritage while making it accessible to everyone.</p>
         </div>
         <div class="side-features">
@@ -1091,13 +1464,200 @@
     <footer>
       <div class="container">
         <div class="copyright">
-          &copy; 2025 Culture Trail (Bharatiya Sanskriti). All rights reserved.
+          &copy; 2025 Sangama (Bharatiya Sanskriti). All rights reserved.
         </div>
       </div>
     </footer>
   
     <script>
-      // Toggle mobile menu
+      document.addEventListener('DOMContentLoaded', () => {
+        const cards = document.querySelectorAll('.destination-card');
+        const prevBtn = document.querySelector('.slider-prev');
+        const nextBtn = document.querySelector('.slider-next');
+        let currentIndex = 0;
+        const visibleCount = 3; // Always show 3 cards
+        let autoSlideInterval;
+        const slideDelay = 2500;
+      
+        function updateVisibleCards() {
+          cards.forEach((card, index) => {
+            card.classList.remove('active', 'left-card', 'right-card');
+            card.style.display = 'none';
+          });
+      
+          const total = cards.length;
+          const prevIndex = (currentIndex - 1 + total) % total;
+          const nextIndex = (currentIndex + 1) % total;
+      
+          cards[prevIndex].style.display = 'block';
+          cards[prevIndex].classList.add('left-card');
+      
+          cards[currentIndex].style.display = 'block';
+          cards[currentIndex].classList.add('active');
+      
+          cards[nextIndex].style.display = 'block';
+          cards[nextIndex].classList.add('right-card');
+        }
+      
+        function goToNext() {
+          currentIndex = (currentIndex + 1) % cards.length;
+          updateVisibleCards();
+        }
+      
+        function goToPrev() {
+          currentIndex = (currentIndex - 1 + cards.length) % cards.length;
+          updateVisibleCards();
+        }
+      
+        function startAutoSlide() {
+          autoSlideInterval = setInterval(goToNext, slideDelay);
+        }
+      
+        function stopAutoSlide() {
+          clearInterval(autoSlideInterval);
+        }
+      
+        // Button controls
+        prevBtn.addEventListener('click', () => {
+          goToPrev();
+          stopAutoSlide();
+          startAutoSlide();
+        });
+      
+        nextBtn.addEventListener('click', () => {
+          goToNext();
+          stopAutoSlide();
+          startAutoSlide();
+        });
+      
+        // Pause on hover
+        const sliderContainer = document.querySelector('.card-slider-container');
+        sliderContainer.addEventListener('mouseenter', stopAutoSlide);
+        sliderContainer.addEventListener('mouseleave', startAutoSlide);
+      
+        // Touch swipe detection (basic)
+        let startX = 0;
+        sliderContainer.addEventListener('touchstart', (e) => {
+          stopAutoSlide();
+          startX = e.touches[0].clientX;
+        });
+      
+        sliderContainer.addEventListener('touchend', (e) => {
+          let endX = e.changedTouches[0].clientX;
+          if (startX - endX > 50) {
+            goToNext();
+          } else if (endX - startX > 50) {
+            goToPrev();
+          }
+          startAutoSlide();
+        });
+      
+        updateVisibleCards();
+        startAutoSlide();
+      });
+      </script>
+      
+      <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          const cards = document.querySelectorAll('.destination-card');
+          const container = document.querySelector('.card-slider-container');
+          const prevBtn = document.querySelector('.slider-prev');
+          const nextBtn = document.querySelector('.slider-next');
+          let currentIndex = 0;
+          const autoPlayDelay = 2500;
+          let autoPlayInterval;
+        
+          // Initialize: show 3 cards (prev, current, next)
+          function updateCards() {
+            cards.forEach((card, index) => {
+              card.style.display = 'none';
+              card.classList.remove('active', 'left-card', 'right-card');
+            });
+        
+            const total = cards.length;
+            const prev = (currentIndex - 1 + total) % total;
+            const next = (currentIndex + 1) % total;
+        
+            cards[prev].style.display = 'block';
+            cards[prev].classList.add('left-card');
+        
+            cards[currentIndex].style.display = 'block';
+            cards[currentIndex].classList.add('active');
+        
+            cards[next].style.display = 'block';
+            cards[next].classList.add('right-card');
+          }
+        
+          function goNext() {
+            currentIndex = (currentIndex + 1) % cards.length;
+            updateCards();
+          }
+        
+          function goPrev() {
+            currentIndex = (currentIndex - 1 + cards.length) % cards.length;
+            updateCards();
+          }
+        
+          function startAutoplay() {
+            autoPlayInterval = setInterval(goNext, autoPlayDelay);
+          }
+        
+          function stopAutoplay() {
+            clearInterval(autoPlayInterval);
+          }
+        
+          // Hover, click, swipe handlers
+          container.addEventListener('mouseenter', (e) => {
+            stopAutoplay();
+            console.log(e.type + ' detected');
+          });
+        
+          container.addEventListener('mouseleave', (e) => {
+            startAutoplay();
+            console.log(e.type + ' detected');
+          });
+        
+          container.addEventListener('click', (e) => {
+            stopAutoplay();
+            console.log(e.type + ' detected');
+          });
+        
+          // Mobile swipe detection
+          let startX = 0;
+          container.addEventListener('touchstart', (e) => {
+            stopAutoplay();
+            startX = e.touches[0].clientX;
+          });
+        
+          container.addEventListener('touchend', (e) => {
+            const endX = e.changedTouches[0].clientX;
+            const diff = endX - startX;
+            if (diff > 50) goPrev(); // swipe right
+            else if (diff < -50) goNext(); // swipe left
+            startAutoplay();
+            console.log('swipe detected');
+          });
+        
+          // Navigation buttons
+          prevBtn.addEventListener('click', () => {
+            goPrev();
+            stopAutoplay();
+          });
+        
+          nextBtn.addEventListener('click', () => {
+            goNext();
+            stopAutoplay();
+          });
+        
+          updateCards();
+          startAutoplay();
+        });
+        </script>
+        
+      
+      
+    <script>
+    // Toggle mobile menu
       const hamburger = document.querySelector('.hamburger');
       const navLinks = document.querySelector('.nav-links');
       
