@@ -831,12 +831,21 @@
   </style>
 </head>
 <body>
+  <div id="usernameModal" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); display: flex; align-items: center; justify-content: center; z-index: 9999;">
+    <div style="background: white; padding: 30px; border-radius: 10px; max-width: 400px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+      <h2 style="color: #E63728; margin-bottom: 20px;">Welcome Explorer!</h2>
+      <p style="color: #444; margin-bottom: 20px;">Enter your name to begin your travel personality journey ✈️</p>
+      <input type="text" id="usernameInput" placeholder="Your Name" style="padding: 10px 15px; border-radius: 5px; width: 100%; margin-bottom: 20px; border: 1px solid #ccc; font-size: 16px;">
+      <button onclick="submitName()" style="padding: 10px 20px; border: none; background: #FF6D24; color: white; border-radius: 5px; cursor: pointer; font-weight: bold;">Let's Go!</button>
+    </div>
+  </div>
+  
     <!-- Navigation Bar -->
     <nav>
       <div class="container nav-container">
         <a href="#" class="nav-logo">Yatra AI</a>
         <div class="nav-links">
-          <a href="index.html">Home</a>
+          <a href='/'>Home</a>
           <a href="#">About</a>
           <a href="#">Culture Trail</a>
         </div>
@@ -1075,7 +1084,34 @@
           <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
           <!-- Firebase Analytics -->
           <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-analytics-compat.js"></script>
+
+          <script>
+            let globalUserName = '';
           
+            function submitName() {
+              const name = document.getElementById('usernameInput').value.trim();
+              if (!name) {
+                alert("Please enter your name to continue.");
+                return;
+              }
+              globalUserName = name;
+              document.getElementById('usernameModal').style.display = 'none';
+              document.querySelector('.tagline').innerHTML = `Hello <strong>${name}</strong>, ready for a fun quiz?`;
+          
+              // Store to Firebase
+              const db = firebase.firestore();
+              db.collection("user_names").add({
+                name: name,
+                timestamp: firebase.firestore.Timestamp.fromDate(new Date())
+              }).then(() => {
+                console.log("Name stored successfully");
+              });
+            }
+          
+            window.addEventListener('load', function() {
+              document.getElementById('usernameModal').style.display = 'flex';
+            });
+          </script>
           <script>
           document.addEventListener('DOMContentLoaded', function() {
             // Initialize Firebase
@@ -1132,35 +1168,35 @@
                 description: "You are drawn to the spiritual aspects of Indian culture. The concepts of inner peace, meditation, and connection to something greater resonate with you deeply.",
                 interests: "Yoga, meditation, spirituality, ashrams, sacred texts, temples, and holistic living.",
                 experiences: "Visit Rishikesh or Varanasi for spiritual retreats, learn traditional yoga from masters, explore ancient temples, and participate in meditation workshops.",
-                image: "/api/placeholder/150/150" // Placeholder for spiritual image
+                image: "images/badge.png" // Placeholder for spiritual image
               },
               culinary: {
                 name: "Culinary Explorer",
                 description: "The rich flavors and diverse culinary traditions of India captivate your senses. You appreciate the cultural significance of food in Indian heritage.",
                 interests: "Regional cuisines, spices, cooking techniques, food festivals, street food, and traditional dietary practices.",
                 experiences: "Take cooking classes in different Indian regions, explore local markets, participate in food festivals, and learn about Ayurvedic cooking principles.",
-                image: "/api/placeholder/150/150" // Placeholder for culinary image
+                image: "images/badge.png" // Placeholder for culinary image
               },
               artistic: {
                 name: "Creative Appreciator",
                 description: "You resonate with India's rich artistic and creative expressions. The vibrant colors, intricate patterns, and expressive performances speak to your aesthetic sensibilities.",
                 interests: "Classical dance, music, visual arts, textiles, crafts, architecture, and contemporary Indian creative expressions.",
                 experiences: "Learn a classical dance form, attend music concerts, visit art villages in Rajasthan, participate in art workshops, and explore India's architectural wonders.",
-                image: "/api/placeholder/150/150" // Placeholder for artistic image
+                image: "images/badge.png" // Placeholder for artistic image
               },
               philosophical: {
                 name: "Philosophical Thinker",
                 description: "The deep philosophical traditions of India intrigue you. You appreciate the profound wisdom and contemplative aspects of Indian thought.",
                 interests: "Ancient texts, philosophical schools, ethical concepts, scholarly discussions, and the integration of philosophy with daily life.",
                 experiences: "Study texts like the Upanishads or Bhagavad Gita with scholars, attend philosophical discourses, learn Sanskrit, and explore the intellectual heritage of India.",
-                image: "/api/placeholder/150/150" // Placeholder for philosophical image
+                image: "images/badge.png" // Placeholder for philosophical image
               },
               historical: {
                 name: "Heritage Enthusiast",
                 description: "India's rich historical tapestry and cultural evolution fascinate you. You value the preservation and understanding of traditional knowledge and heritage.",
                 interests: "Historical sites, ancient civilizations, architectural marvels, traditional crafts, and the stories behind cultural practices.",
                 experiences: "Explore UNESCO heritage sites, visit historical museums, participate in archaeological tours, and learn about traditional craft preservation.",
-                image: "/api/placeholder/150/150" // Placeholder for historical image
+                image: "images/badge.png" // Placeholder for historical image
               }
             };
             

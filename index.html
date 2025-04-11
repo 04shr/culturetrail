@@ -25,7 +25,6 @@
       --accent-secondary-dark: #ff7b00;
       --border-dark: #495057;
       --gold-dark: #ffd700;
-
       --color1: #FF9933; /* Saffron - Indian flag */
       --color2: #FFFFFF; /* White - Indian flag */
       --color3: #138808; /* Green - Indian flag */
@@ -59,16 +58,15 @@
     header {
       background-image: 
         linear-gradient(135deg, rgba(255, 153, 51, 0.8), rgba(230, 55, 40, 0.8)),
-        url('https://images.unsplash.com/photo-1524492412937-b33874b7bdd6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80');
+        url('https://bombaytrooper.com/wp-content/uploads/2024/04/0_yGBBhx693nFddxTs.png');
       background-size: cover;
       background-position: center;
       color: white;
-      padding: 100px 0;
+      padding: 80px 0;
       text-align: center;
       position: relative;
       clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
     }
-    
     .logo {
       font-size: 4rem;
       margin-bottom: 10px;
@@ -265,10 +263,11 @@
       text-align: center;
       margin-bottom: 50px;
       position: relative;
+      background-color: var(--bg-secondary-dark);
     }
     
     .section-title {
-      font-size: 2.8rem;
+      font-size: 2rem;
       margin-bottom: 20px;
       color: var(--text-primary-dark);
       position: relative;
@@ -292,7 +291,7 @@
     }
     
     .section-description {
-      font-size: 1.2rem;
+      font-size: 1rem;
       max-width: 800px;
       margin: 0 auto;
       color: var(--text-secondary-dark);
@@ -305,13 +304,14 @@
     /* Feature Cards with Hover Effects */
     .features {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 30px;
       margin-top: 40px;
+      background-color: var(--bg-secondary-dark);
     }
     
     .feature-card {
-      background-color: var(--bg-primary-dark);
+      background-color: var(--bg-secondary-dark);
       border-radius: 15px;
       overflow: hidden;
       box-shadow: 0 10px 20px rgba(0,0,0,0.3);
@@ -321,7 +321,7 @@
     }
     
     .feature-card:nth-child(2) {
-      border-top-color: var(--color2);
+      border-top-color: var(--accent-secondary-light);
     }
     
     .feature-card:nth-child(3) {
@@ -362,13 +362,13 @@
     }
     
     .feature-content {
-      padding: 25px;
+      padding: 20px;
       position: relative;
       z-index: 1;
     }
     
     .feature-title {
-      font-size: 1.6rem;
+      font-size: 1 rem;
       margin-bottom: 15px;
       color: var(--text-primary-dark);
     }
@@ -482,7 +482,7 @@
     .final-cta {
   text-align: center;
   padding: 100px 0 50px;  /* Added bottom padding */
-  background: var(--bg-secondary-dark); /* Adjusted transparency */
+  background: var(--bg-primary-dark); /* Adjusted transparency */
 }
     
     .final-cta h2 {
@@ -894,7 +894,7 @@
       }
       
       .section-title {
-        font-size: 1.8rem;
+        font-size: 1.8 rem;
       }
       
       .section-description {
@@ -1198,10 +1198,10 @@
     <header>
       <div class="container">
         <h1 class="logo">Sangama</h1>
-        <p class="tagline">Embark on a journey to discover the rich tapestry of Indian cultural heritage</p>
+        <p class="tagline">Smart Journeys, Safe Memories.</p>
         <div class="header-buttons">
           <a href="#contSlider" class="header-cta">Get Started</a>
-          <a href="demo.html" class="header-cta demo-btn">View Demo</a>
+          <a href="demo.html" class="header-cta demo-btn">About</a>
         </div>
       </div>
     </header>
@@ -1338,38 +1338,84 @@
     <section id="features" class="section">
       <div class="container">
         <div class="section-header">
-          <h2 class="section-title">Discover Cultural Experiences</h2>
-          <p class="section-description">Dive into India's diverse cultural heritage through interactive journeys, personalized recommendations, and immersive experiences.</p>
+          <h2 class="section-title">Smart Safety Enhancements</h2>
+          <p class="section-description">Stay informed and secure while exploring. Our safety-first features provide real-time assistance, alerts, and essential guidance for a worry-free travel experience.</p>
         </div>
         <div class="features">
           <div class="feature-card">
-            <img src="https://images.unsplash.com/photo-1551918120-9739cb430c6d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80" alt="Feature" class="feature-img">
+            <img src="images/chatbot.jpg" alt="Multilingual Chatbot" class="feature-img">
             <div class="feature-content">
-              <h3 class="feature-title">Personalized Cultural Routes</h3>
-              <p class="feature-description">Discover cultural experiences tailored to your interests and preferences through our intelligent recommendation system.</p>
+              <h3 class="feature-title">Real-Time Multilingual Safety Chatbot</h3>
+              <p class="feature-description">Get instant safety tips, travel alerts, and local emergency info in your language with our intelligent multilingual chatbot.</p>
               <a href="#" class="feature-link">Learn more <i class="fas fa-arrow-right"></i></a>
             </div>
           </div>
           <div class="feature-card">
-            <img src="https://images.unsplash.com/photo-1604871000636-074fa5117945?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80" alt="Feature" class="feature-img">
+            <img src="images/MAP.jpg" alt="Safety Map" class="feature-img">
             <div class="feature-content">
-              <h3 class="feature-title">Traditional Art & Craft</h3>
-              <p class="feature-description">Explore India's rich artistic traditions through virtual galleries, artisan stories, and guided craft experiences.</p>
+              <h3 class="feature-title">Color-Coded Safety Map</h3>
+              <p class="feature-description">Navigate safely with our dynamic map highlighting areas based on real-time safety ratings — from green (safe) to red (high-risk).</p>
               <a href="#" class="feature-link">Learn more <i class="fas fa-arrow-right"></i></a>
             </div>
           </div>
           <div class="feature-card">
-            <img src="https://images.unsplash.com/photo-1561361513-2d000a50f0dc?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80" alt="Feature" class="feature-img">
+            <img src="images/sos.avif" alt="Emergency SOS" class="feature-img">
             <div class="feature-content">
-              <h3 class="feature-title">Festival & Celebrations</h3>
-              <p class="feature-description">Experience the vibrant festivals of India with cultural contexts, traditions, and community connections.</p>
+              <h3 class="feature-title">Live Location SOS Alerts</h3>
+              <p class="feature-description">Send emergency emails and SMS messages with your live location to trusted contacts in just one tap.</p>
+              <a href="#" class="feature-link">Learn more <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+          <div class="feature-card">
+            <img src="images/rules.jpg" alt="Emergency Info" class="feature-img">
+            <div class="feature-content">
+              <h3 class="feature-title">Quick Emergency Information</h3>
+              <p class="feature-description">Access nearby emergency contacts, important rules, and guidelines quickly when you need them most.</p>
               <a href="#" class="feature-link">Learn more <i class="fas fa-arrow-right"></i></a>
             </div>
           </div>
         </div>
       </div>
     </section>
-  
+    
+     <!-- Explore Section -->
+    <!-- Explore Section -->
+<section id="explore" class="section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">AI Travel Assistant Tools</h2>
+      <p class="section-description">Experience seamless journeys powered by AI — from smart itinerary planning to real-time translation and daily activity organization.</p>
+    </div>
+    <div class="features">
+      <div class="feature-card">
+        <img src="images/planner.avif" alt="Itinerary Planner" class="feature-img">
+        <div class="feature-content">
+          <h3 class="feature-title">Smart Itinerary Planner</h3>
+          <p class="feature-description">Get a complete travel plan with suggested places, timings, commute options, and cultural highlights tailored to your preferences.</p>
+          <a href="#" class="feature-link">Discover more <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="feature-card">
+        <img src="images/translator.avif" alt="Real-Time Translation" class="feature-img">
+        <div class="feature-content">
+          <h3 class="feature-title">Real-Time Translation</h3>
+          <p class="feature-description">Break language barriers instantly with on-the-go translation for signs, conversations, and important documents in local dialects.</p>
+          <a href="#" class="feature-link">Discover more <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="feature-card">
+        <img src="images/task planner.avif" alt="Day Planner" class="feature-img">
+        <div class="feature-content">
+          <h3 class="feature-title">AI Day Agent Planner</h3>
+          <p class="feature-description">Let our AI agent organize your daily activities, track your pace, and adapt the schedule in real time for a stress-free experience.</p>
+          <a href="#" class="feature-link">Discover more <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
     <!-- About Section -->
     <section id="about" class="section-alt">
       <div class="container">
@@ -1412,41 +1458,7 @@
       </div>
     </section>
   
-    <!-- Explore Section -->
-    <section id="explore" class="section">
-      <div class="container">
-        <div class="section-header">
-          <h2 class="section-title">Explore Cultural Dimensions</h2>
-          <p class="section-description">Dive deep into the various facets of Indian cultural heritage through our curated collections.</p>
-        </div>
-        <div class="features">
-          <div class="feature-card">
-            <img src="https://images.unsplash.com/photo-1593693411515-c20261bcad6e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80" alt="Feature" class="feature-img">
-            <div class="feature-content">
-              <h3 class="feature-title">Sacred Architecture</h3>
-              <p class="feature-description">Explore the magnificent temples, mosques, churches, and other spiritual spaces that define India's architectural landscape.</p>
-              <a href="#" class="feature-link">Discover more <i class="fas fa-arrow-right"></i></a>
-            </div>
-          </div>
-          <div class="feature-card">
-            <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80" alt="Feature" class="feature-img">
-            <div class="feature-content">
-              <h3 class="feature-title">Culinary Traditions</h3>
-              <p class="feature-description">Journey through the diverse flavors, cooking techniques, and food rituals that make Indian cuisine a global phenomenon.</p>
-              <a href="#" class="feature-link">Discover more <i class="fas fa-arrow-right"></i></a>
-            </div>
-          </div>
-          <div class="feature-card">
-            <img src="https://images.unsplash.com/photo-1503287641878-b9c48edf0049?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80" alt="Feature" class="feature-img">
-            <div class="feature-content">
-              <h3 class="feature-title">Performing Arts</h3>
-              <p class="feature-description">Witness the rhythmic expressions of classical dance forms and musical traditions that have evolved over centuries.</p>
-              <a href="#" class="feature-link">Discover more <i class="fas fa-arrow-right"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+   
   
     <!-- Final Call to Action -->
     <section class="final-cta">
