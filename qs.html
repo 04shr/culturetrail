@@ -12,8 +12,8 @@
       --text-secondary-light: #555555;
       --bg-primary-light: #f9f7f0;
       --bg-secondary-light: #f5f0e4;
-      --accent-light: #FF6D24; /* Saffron orange */
-      --accent-secondary-light: #E63728; /* Deeper red */
+      --accent-light: #FF6D24; 
+      --accent-secondary-light: #E63728; 
       --border-light: #d5dbdb;
       --gold-light: #d4af37;
       
@@ -21,17 +21,17 @@
       --text-secondary-dark: #adb5bd;
       --bg-primary-dark: #1a1a2e;
       --bg-secondary-dark: #16213e;
-      --accent-dark: #FF9933; /* Indian flag saffron */
+      --accent-dark: #FF9933; 
       --accent-secondary-dark: #ff7b00;
       --border-dark: #495057;
       --gold-dark: #ffd700;
 
-      --color1: #FF9933; /* Saffron - Indian flag */
-      --color2: #FFFFFF; /* White - Indian flag */
-      --color3: #138808; /* Green - Indian flag */
-      --color4: #8D3DAF; /* Purple - for royalty */
-      --color5: #E91E63; /* Pink - for festivals */
-      --color6: #d4af37; /* Gold - for traditions */
+      --color1: #FF9933;       
+      --color2: #FFFFFF; 
+      --color3: #138808; 
+      --color4: #8D3DAF; 
+      --color5: #E91E63; 
+      --color6: #d4af37; 
     }
     
     body {
@@ -55,7 +55,7 @@
       padding: 0 20px;
     }
     
-    /* Vibrant Indian Header */
+
     header {
       background-image: 
         linear-gradient(135deg, rgba(255, 153, 51, 0.8), rgba(230, 55, 40, 0.8)),
@@ -92,7 +92,6 @@
       animation: fadeIn 1.5s ease;
     }
 
-    /* Navigation Bar */
     nav {
       background-color: var(--bg-primary-dark);
       padding: 15px 0;
@@ -171,8 +170,7 @@
     .nav-links a:hover::after {
       width: 100%;
     }
-    
-    /* Hamburger Menu for Mobile */
+
     .hamburger {
       display: none;
       cursor: pointer;
@@ -186,7 +184,6 @@
       color: var(--accent-light);
     }
 
-    /* Questionnaire Section */
     .questionnaire-section {
       padding: 60px 0;
     }
@@ -447,8 +444,7 @@
     .question-section[data-question="5"] .submit-btn {
   display: block !important;
 }
-    
-    /* Results Section */
+
     .results-section {
       display: none;
       animation: fadeIn 1s ease;
@@ -720,7 +716,7 @@
         box-shadow: 0 8px 20px rgba(255, 109, 36, 0.4);
       }
       
-      /* Toggle Theme Button */
+     
       .theme-toggle {
         position: fixed;
         bottom: 30px;
@@ -750,7 +746,6 @@
         transform: scale(1.1);
       }
       
-      /* Animations */
       @keyframes fadeIn {
         from {
           opacity: 0;
@@ -773,7 +768,6 @@
         }
       }
       
-      /* Responsive Styles */
       @media (max-width: 768px) {
         .logo {
           font-size: 2.2rem;
@@ -840,7 +834,6 @@
     </div>
   </div>
   
-    <!-- Navigation Bar -->
     <nav>
       <div class="container nav-container">
         <a href="#" class="nav-logo">Yatra AI</a>
@@ -855,7 +848,6 @@
       </div>
     </nav>
   
-    <!-- Header Section -->
     <header>
       <div class="container">
         <h1 class="logo">Yatra AI</h1>
@@ -863,7 +855,7 @@
       </div>
     </header>
   
-    <!-- Questionnaire Section -->
+   
     <section class="questionnaire-section">
       <div class="container">
         <div class="questionnaire-header">
@@ -886,7 +878,6 @@
             <div class="progress-step" data-step="5">5</div>
           </div>
           
-          <!-- Question 1 -->
           <div class="question-section active" data-question="1">
             <h3 class="question">Which of these Indian festivals intrigues you the most?</h3>
             <div class="options">
@@ -912,7 +903,7 @@
             </div>
           </div>
           
-          <!-- Question 2 -->
+ 
           <div class="question-section" data-question="2">
             <h3 class="question">If you could bring one aspect of Indian culture into your daily life, what would it be?</h3>
             <div class="options">
@@ -937,8 +928,7 @@
             <button class="next-btn">Next Question</button>
           </div>
           </div>
-          
-          <!-- Question 3 -->
+    
           <div class="question-section" data-question="3">
           <h3 class="question">Which Indian cultural environment would you most like to experience?</h3>
           <div class="options">
@@ -963,8 +953,7 @@
             <button class="next-btn">Next Question</button>
           </div>
           </div>
-          
-          <!-- Question 4 -->
+      
           <div class="question-section" data-question="4">
           <h3 class="question">Which aspect of Indian philosophy resonates with you most?</h3>
           <div class="options">
@@ -989,8 +978,7 @@
             <button class="next-btn">Next Question</button>
           </div>
           </div>
-          
-          <!-- Question 5 -->
+
           <div class="question-section" data-question="5">
           <h3 class="question">If you could learn one traditional Indian skill, what would it be?</h3>
           <div class="options">
@@ -1017,7 +1005,6 @@
           </div>
           </div>
           
-          <!-- Results Section -->
           <div class="results-section" id="results">
           <div class="results-header">
             <h2 class="results-title">Your Cultural Connection</h2>
@@ -1073,16 +1060,16 @@
           </div>
           </section>
           
-          <!-- Theme Toggle Button -->
+        
           <button class="theme-toggle" id="themeToggle">
           <i class="fas fa-moon"></i>
           </button>
 
-          <!-- Firebase App (the core Firebase SDK) -->
+       
           <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
-          <!-- Firebase Firestore -->
+         
           <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
-          <!-- Firebase Analytics -->
+         
           <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-analytics-compat.js"></script>
 
           <script>
@@ -1098,7 +1085,7 @@
               document.getElementById('usernameModal').style.display = 'none';
               document.querySelector('.tagline').innerHTML = `Hello <strong>${name}</strong>, ready for a fun quiz?`;
           
-              // Store to Firebase
+       
               const db = firebase.firestore();
               db.collection("user_names").add({
                 name: name,
@@ -1114,7 +1101,7 @@
           </script>
           <script>
           document.addEventListener('DOMContentLoaded', function() {
-            // Initialize Firebase
+        
             const firebaseConfig = {
               apiKey: "AIzaSyDPXvNb2JDeNA4g3U7l-I3H0v9cRol9hgM",
               authDomain: "cultural-questionnaire.firebaseapp.com",
@@ -1125,27 +1112,25 @@
               appId: "1:117362372051:web:3f7cc6bdd705ba831b5326",
               measurementId: "G-LD6K9TXZXP"
             };
-            
-            // Initialize Firebase
+       
             firebase.initializeApp(firebaseConfig);
-            
-            // Initialize Firestore
+           
             const db = firebase.firestore();
             
-            // Initialize Analytics
+           
             const analytics = firebase.analytics();
             
-            // Track quiz start
+            
             analytics.logEvent('quiz_started');
 
-            // Variables
+          
             let currentQuestion = 1;
             const totalQuestions = 5;
             let userSelections = [];
             let themeDark = true;
             let startTime = new Date(); // Track when the quiz started
             
-            // Elements
+           
             const progressFill = document.getElementById('progressFill');
             const progressSteps = document.querySelectorAll('.progress-step');
             const questionSections = document.querySelectorAll('.question-section');
@@ -1160,50 +1145,48 @@
             const results = document.getElementById('results');
             const restartBtn = document.getElementById('restartBtn');
             const shareBtn = document.getElementById('shareBtn');
-            
-            // Profile data
+           
             const profileData = {
               spiritual: {
                 name: "Spiritual Seeker",
                 description: "You are drawn to the spiritual aspects of Indian culture. The concepts of inner peace, meditation, and connection to something greater resonate with you deeply.",
                 interests: "Yoga, meditation, spirituality, ashrams, sacred texts, temples, and holistic living.",
                 experiences: "Visit Rishikesh or Varanasi for spiritual retreats, learn traditional yoga from masters, explore ancient temples, and participate in meditation workshops.",
-                image: "images/badge.png" // Placeholder for spiritual image
+                image: "images/badge.png"
               },
               culinary: {
                 name: "Culinary Explorer",
                 description: "The rich flavors and diverse culinary traditions of India captivate your senses. You appreciate the cultural significance of food in Indian heritage.",
                 interests: "Regional cuisines, spices, cooking techniques, food festivals, street food, and traditional dietary practices.",
                 experiences: "Take cooking classes in different Indian regions, explore local markets, participate in food festivals, and learn about Ayurvedic cooking principles.",
-                image: "images/badge.png" // Placeholder for culinary image
+                image: "images/badge.png" 
               },
               artistic: {
                 name: "Creative Appreciator",
                 description: "You resonate with India's rich artistic and creative expressions. The vibrant colors, intricate patterns, and expressive performances speak to your aesthetic sensibilities.",
                 interests: "Classical dance, music, visual arts, textiles, crafts, architecture, and contemporary Indian creative expressions.",
                 experiences: "Learn a classical dance form, attend music concerts, visit art villages in Rajasthan, participate in art workshops, and explore India's architectural wonders.",
-                image: "images/badge.png" // Placeholder for artistic image
+                image: "images/badge.png" 
               },
               philosophical: {
                 name: "Philosophical Thinker",
                 description: "The deep philosophical traditions of India intrigue you. You appreciate the profound wisdom and contemplative aspects of Indian thought.",
                 interests: "Ancient texts, philosophical schools, ethical concepts, scholarly discussions, and the integration of philosophy with daily life.",
                 experiences: "Study texts like the Upanishads or Bhagavad Gita with scholars, attend philosophical discourses, learn Sanskrit, and explore the intellectual heritage of India.",
-                image: "images/badge.png" // Placeholder for philosophical image
+                image: "images/badge.png" 
               },
               historical: {
                 name: "Heritage Enthusiast",
                 description: "India's rich historical tapestry and cultural evolution fascinate you. You value the preservation and understanding of traditional knowledge and heritage.",
                 interests: "Historical sites, ancient civilizations, architectural marvels, traditional crafts, and the stories behind cultural practices.",
                 experiences: "Explore UNESCO heritage sites, visit historical museums, participate in archaeological tours, and learn about traditional craft preservation.",
-                image: "images/badge.png" // Placeholder for historical image
+                image: "images/badge.png" 
               }
             };
             
-            // Initialize Progress
+           
             updateProgress();
-            
-            // Event Listeners
+         
             optionItems.forEach(item => {
               item.addEventListener('click', function() {
                 const currentOptions = this.parentElement.querySelectorAll('.option-item');
@@ -1232,62 +1215,60 @@
             
             shareBtn.addEventListener('click', shareResults);
             
-            // Functions
+        
             function goToNextQuestion() {
               const currentQuestionSection = document.querySelector(`.question-section[data-question="${currentQuestion}"]`);
               const selectedOption = currentQuestionSection.querySelector('.option-item.selected');
               
               if (!selectedOption) {
-                // Show error or notification that user needs to select an option
+               
                 alert('Please select an option before proceeding.');
                 return;
               }
               
-              // Store selection
+              
               userSelections[currentQuestion - 1] = selectedOption.getAttribute('data-value');
               
-              // Track question answer
+              
               analytics.logEvent('question_answered', {
                 question_number: currentQuestion,
                 answer_value: userSelections[currentQuestion - 1]
               });
               
-              // Hide current question
+              
               currentQuestionSection.classList.remove('active');
               
-              // Increment current question
+              
               currentQuestion++;
               
-              // Show next question
+             
               const nextQuestionSection = document.querySelector(`.question-section[data-question="${currentQuestion}"]`);
               nextQuestionSection.classList.add('active');
               
-              // Update progress
+              
               updateProgress();
             }
             
             function goToPreviousQuestion() {
-              // Hide current question
+              
               const currentQuestionSection = document.querySelector(`.question-section[data-question="${currentQuestion}"]`);
               currentQuestionSection.classList.remove('active');
               
-              // Decrement current question
               currentQuestion--;
               
-              // Show previous question
+              
               const prevQuestionSection = document.querySelector(`.question-section[data-question="${currentQuestion}"]`);
               prevQuestionSection.classList.add('active');
-              
-              // Update progress
+             
               updateProgress();
             }
             
             function updateProgress() {
-              // Update progress fill
+              
               const progressPercentage = ((currentQuestion - 1) / totalQuestions) * 100;
               progressFill.style.width = `${progressPercentage}%`;
               
-              // Update progress steps
+           
               progressSteps.forEach(step => {
                 const stepNum = parseInt(step.getAttribute('data-step'));
                 if (stepNum === currentQuestion) {
@@ -1297,15 +1278,14 @@
                 }
               });
               
-              // Enable/disable prev button
+              
               const prevBtn = document.querySelector(`.question-section[data-question="${currentQuestion}"] .prev-btn`);
               if (currentQuestion === 1) {
                 prevBtn.disabled = true;
               } else {
                 prevBtn.disabled = false;
               }
-              
-              // Show submit button on last question
+            
               if (currentQuestion === totalQuestions) {
                 const lastQuestionNextBtn = document.querySelector(`.question-section[data-question="${totalQuestions}"] .next-btn`);
                 const lastQuestionSubmitBtn = document.querySelector(`.question-section[data-question="${totalQuestions}"] .submit-btn`);
@@ -1318,13 +1298,13 @@
                   lastQuestionSubmitBtn.style.display = 'block';
                 }
               } else {
-                // For non-last questions, make sure next button is visible and submit is hidden
+               
                 const currentNextBtn = document.querySelector(`.question-section[data-question="${currentQuestion}"] .next-btn`);
                 if (currentNextBtn) {
                   currentNextBtn.style.display = 'block';
                 }
                 
-                // Just in case, hide any submit buttons that might be visible
+               
                 const currentSubmitBtn = document.querySelector(`.question-section[data-question="${currentQuestion}"] .submit-btn`);
                 if (currentSubmitBtn) {
                   currentSubmitBtn.style.display = 'none';
@@ -1333,7 +1313,7 @@
             }
             
             function submitQuiz() {
-              // Get answer for last question
+             
               const lastQuestionSection = document.querySelector(`.question-section[data-question="${currentQuestion}"]`);
               const selectedOption = lastQuestionSection.querySelector('.option-item.selected');
               
@@ -1342,23 +1322,23 @@
                 return;
               }
               
-              // Store selection
+              
               userSelections[currentQuestion - 1] = selectedOption.getAttribute('data-value');
               
-              // Calculate result
+            
               const result = calculateResult();
               
-              // Save to Firebase
+              
               saveResultsToFirebase(userSelections, result);
               
-              // Display results
+             
               displayResults(result);
               
-              // Hide questionnaire, show results
+             
               questionnaire.style.display = 'none';
               results.style.display = 'block';
               
-              // Track quiz completion
+              
               analytics.logEvent('quiz_completed', {
                 completion_time_seconds: (new Date() - startTime) / 1000,
                 primary_match: result.primary.match,
@@ -1367,17 +1347,17 @@
             }
             
             function saveResultsToFirebase(selections, result) {
-              // Generate a timestamp for the submission
+              
               const timestamp = new Date();
               
-              // Optional: Collect a user identifier (could be anonymous)
+             
               let userId = localStorage.getItem('cultural_quiz_user_id');
               if (!userId) {
                 userId = 'user_' + Math.random().toString(36).substr(2, 9);
                 localStorage.setItem('cultural_quiz_user_id', userId);
               }
               
-              // Create the data object
+        
               const submissionData = {
                 userId: userId,
                 timestamp: firebase.firestore.Timestamp.fromDate(timestamp),
@@ -1390,7 +1370,7 @@
                 completionTimeSeconds: (timestamp - startTime) / 1000
               };
               
-              // Save to Firestore
+            
               db.collection("quiz_submissions").add(submissionData)
                 .then((docRef) => {
                   console.log("Document written with ID: ", docRef.id);
@@ -1401,7 +1381,7 @@
             }
             
             function calculateResult() {
-              // Count occurrences of each category
+             
               const counts = {
                 spiritual: 0,
                 culinary: 0,
@@ -1414,10 +1394,10 @@
                 counts[selection]++;
               });
               
-              // Find primary and secondary matches
-              let primaryMatch = 'spiritual'; // Default
+              
+              let primaryMatch = 'spiritual'; 
               let primaryCount = 0;
-              let secondaryMatch = 'spiritual'; // Default
+              let secondaryMatch = 'spiritual'; 
               let secondaryCount = 0;
               
               for (const [category, count] of Object.entries(counts)) {
@@ -1432,7 +1412,7 @@
                 }
               }
               
-              // Calculate percentages
+              
               const primaryPercentage = Math.round((primaryCount / totalQuestions) * 100);
               const secondaryPercentage = Math.round((secondaryCount / totalQuestions) * 100);
               
@@ -1449,64 +1429,61 @@
             }
             
             function displayResults(result) {
-              // Get profile data
+              
               const primaryProfile = profileData[result.primary.match];
               const secondaryProfile = profileData[result.secondary.match];
               
-              // Update profile description
               document.getElementById('profileDescription').textContent = primaryProfile.description;
               
-              // Update key interests
+             
               document.getElementById('keyInterests').textContent = primaryProfile.interests;
               
-              // Update recommended experiences
+    
               document.getElementById('recommendedExperiences').textContent = primaryProfile.experiences;
               
-              // Update match information
+         
               document.getElementById('matchImage').src = primaryProfile.image;
               document.getElementById('matchImage').alt = primaryProfile.name;
               document.getElementById('matchName').textContent = primaryProfile.name;
               document.getElementById('matchDescription').textContent = 
                 `Your results show a strong connection to the ${primaryProfile.name.toLowerCase()} aspect of Indian culture, with a secondary connection to the ${secondaryProfile.name.toLowerCase()} dimension.`;
               
-              // Update percentages
+    
               document.getElementById('primaryPercentage').textContent = `${result.primary.percentage}%`;
               document.getElementById('secondaryPercentage').textContent = `${result.secondary.percentage}%`;
             }
             
             function restartQuiz() {
-              // Reset variables
+      
               currentQuestion = 1;
               userSelections = [];
-              startTime = new Date(); // Reset start time
+              startTime = new Date(); 
               
-              // Reset UI
+         
               document.querySelectorAll('.option-item').forEach(item => {
                 item.classList.remove('selected');
               });
               
-              // Hide results, show questionnaire
+              
               results.style.display = 'none';
               questionnaire.style.display = 'block';
               
-              // Show first question, hide others
+              
               questionSections.forEach(section => {
                 section.classList.remove('active');
               });
               questionSections[0].classList.add('active');
-              
-              // Reset progress
+             
               updateProgress();
               
-              // Track quiz restart
+    
               analytics.logEvent('quiz_restarted');
             }
             
             function shareResults() {
-              // Implement sharing functionality
+              
               alert('Sharing functionality would be implemented here. This could include social media sharing, generating a link, or creating a shareable image of results.');
               
-              // Track share attempt
               analytics.logEvent('results_shared');
             }
             
@@ -1524,7 +1501,7 @@
                 themeToggle.innerHTML = sunIcon;
               }
               
-              // Track theme change
+             
               analytics.logEvent('theme_changed', {
                 theme: themeDark ? 'dark' : 'light'
               });

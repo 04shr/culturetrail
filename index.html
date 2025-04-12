@@ -6,14 +6,15 @@
   <title>Sangama (Bharatiya Sanskriti) - Celebrating India's Cultural Diversity</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Hind+Siliguri:wght@400;500;600&display=swap" rel="stylesheet">
+  
   <style>
     :root {
       --text-primary-light: #2c3e50;
       --text-secondary-light: #555555;
       --bg-primary-light: #f9f7f0;
       --bg-secondary-light: #f5f0e4;
-      --accent-light: #FF6D24; /* Saffron orange */
-      --accent-secondary-light: #E63728; /* Deeper red */
+      --accent-light: #FF6D24;
+      --accent-secondary-light: #E63728; 
       --border-light: #d5dbdb;
       --gold-light: #d4af37;
       
@@ -21,16 +22,16 @@
       --text-secondary-dark: #adb5bd;
       --bg-primary-dark: #1a1a2e;
       --bg-secondary-dark: #16213e;
-      --accent-dark: #FF9933; /* Indian flag saffron */
+      --accent-dark: #FF9933; 
       --accent-secondary-dark: #ff7b00;
       --border-dark: #495057;
       --gold-dark: #ffd700;
-      --color1: #FF9933; /* Saffron - Indian flag */
-      --color2: #FFFFFF; /* White - Indian flag */
-      --color3: #138808; /* Green - Indian flag */
-      --color4: #8D3DAF; /* Purple - for royalty */
-      --color5: #E91E63; /* Pink - for festivals */
-      --color6: #d4af37; /* Gold - for traditions */
+      --color1: #FF9933; 
+      --color2: #FFFFFF; 
+      --color3: #138808;
+      --color4: #8D3DAF; 
+      --color5: #E91E63; 
+      --color6: #d4af37; 
     }
     
     body {
@@ -54,7 +55,7 @@
       padding: 0 20px;
     }
     
-    /* Vibrant Indian Header */
+ 
     header {
       background-image: 
         linear-gradient(135deg, rgba(255, 153, 51, 0.8), rgba(230, 55, 40, 0.8)),
@@ -145,7 +146,7 @@
       box-shadow: 0 8px 20px rgba(230, 57, 70, 0.6);
     }
 
-    /* Animated Navigation */
+
     nav {
       background-color: var(--bg-primary-dark);
       padding: 6px 0;
@@ -227,8 +228,7 @@
     .nav-links a:hover::after {
       width: 100%;
     }
-    
-    /* Hamburger Menu for Mobile */
+ 
     .hamburger {
       display: none;
       cursor: pointer;
@@ -242,7 +242,6 @@
       color: var(--accent-light);
     }
 
-    /* Sections with Colorful Accents */
     .section {
       padding: 80px 0;
       position: relative;
@@ -256,14 +255,15 @@
     }
     
     .light-mode .section-alt {
-      background-color: var(--bg-secondary-light);
+      background-color: var(--bg-secondary-dark);
     }
     
     .section-header {
+      width: 100%;
       text-align: center;
       margin-bottom: 50px;
       position: relative;
-      background-color: var(--bg-secondary-dark);
+      background-color: var(--bg-primary-dark);
     }
     
     .section-title {
@@ -301,7 +301,7 @@
       color: var(--text-secondary-light);
     }
     
-    /* Feature Cards with Hover Effects */
+
     .features {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -396,6 +396,11 @@
       transition: all 0.3s ease;
     }
     
+    .feature-link 
+    {
+      background-color: var(--bg-secondary-dark);
+    }
+
     .light-mode .feature-link {
       color: var(--accent-light);
     }
@@ -478,11 +483,11 @@
       transform: rotate(360deg);
     }
     
-    /* Final CTA section */
+ 
     .final-cta {
   text-align: center;
-  padding: 100px 0 50px;  /* Added bottom padding */
-  background: var(--bg-primary-dark); /* Adjusted transparency */
+  padding: 100px 0 50px;  
+  background: var(--bg-primary-dark); 
 }
     
     .final-cta h2 {
@@ -545,7 +550,7 @@
       box-shadow: 0 8px 20px rgba(230, 57, 70, 0.6);
     }
     
-    /* Side Features Grid */
+    
     .side-features {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -554,7 +559,7 @@
     }
     
     .side-feature {
-      background-color: var(--bg-primary-dark);
+      background-color: var(--bg-secondary-dark);
       padding: 30px;
       border-radius: 15px;
       box-shadow: 0 5px 15px rgba(0,0,0,0.3);
@@ -634,13 +639,13 @@
       color: var(--text-secondary-light);
     }
     
-    /* Colorful Footer */
+   
     footer {
   background-color: var(--bg-primary-dark);
-  padding: 30px 0;  /* Reduced from 80px 0 30px */
+  padding: 30px 0;  
   color: var(--text-secondary-dark);
-  margin-top: 0;  /* Remove the margin-top that's creating space */
-  clip-path: none;  /* Remove the clip-path that's creating the angled edge */
+  margin-top: 0;  
+  clip-path: none;  
 }
     
     .light-mode footer {
@@ -764,20 +769,20 @@
     }
     
     .copyright {
-  margin-top: 30px;  /* Reduced from 50px */
+  margin-top: 30px; 
   text-align: center;
-  padding-top: 20px;  /* Reduced from 30px */
-  border-top: 1px solid rgba(255, 153, 51, 0.3);  /* Using your saffron color with transparency */
+  padding-top: 20px;  
+  border-top: 1px solid rgba(255, 153, 51, 0.3);  
   color: var(--text-secondary-dark);
   font-size: 0.9rem;
 }
 
 .light-mode .copyright {
-  border-top: 1px solid rgba(255, 153, 51, 0.3);  /* Consistent styling */
+  border-top: 1px solid rgba(255, 153, 51, 0.3);  
   color: var(--text-secondary-light);
 }
     
-    /* Animations */
+
     @keyframes fadeIn {
       from { opacity: 0; }
       to { opacity: 1; }
@@ -800,7 +805,7 @@
       100% { transform: scale(1); }
     }
     
-    /* Mobile Responsiveness */
+    
     @media (max-width: 992px) {
       .logo {
         font-size: 3rem;
@@ -927,9 +932,7 @@
       }
     }
 
-    /* Add these styles to your CSS section in the <style> tag */
-
-/* Card Slider Styles */
+    
 .card-slider-container {
   display: flex;
   justify-content: center;
@@ -966,7 +969,7 @@
   box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
 
-/* Destination image area */
+
 .destination-image {
   height: 220px;
   background-size: cover;
@@ -974,7 +977,7 @@
   position: relative;
 }
 
-/* Number badge */
+
 .destination-number {
   position: absolute;
   top: 15px;
@@ -992,7 +995,7 @@
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
-/* Card content area */
+
 .destination-content {
   padding: 20px;
   display: flex;
@@ -1001,7 +1004,7 @@
   justify-content: space-between;
 }
 
-/* Title */
+
 .destination-content h3 {
   font-size: 1.4rem;
   margin-bottom: 10px;
@@ -1012,7 +1015,7 @@
   color: var(--text-primary-light);
 }
 
-/* Description */
+
 .destination-content p {
   color: var(--text-secondary-dark);
   margin-bottom: 20px;
@@ -1025,7 +1028,7 @@
   color: var(--text-secondary-light);
 }
 
-/* Explore link */
+
 .explore-link {
   color: var(--accent-dark);
   text-decoration: none;
@@ -1152,13 +1155,18 @@
   background-color: var(--accent-light);
 }
 
-/* Animation for the active card */
+#about
+{
+  background-color: var(--bg-primary-dark);
+}
+
+
 .destination-card.active {
   transform: scale(1.05);
   z-index: 5;
 }
 
-/* Make the slider responsive */
+
 @media (max-width: 768px) {
   .destination-card {
     flex: 0 0 280px;
@@ -1192,29 +1200,30 @@
   }
 }
   </style>
+
+
 </head>
 <body>
-    <!-- Vibrant Header With Two Buttons -->
+    
     <header>
       <div class="container">
         <h1 class="logo">Sangama</h1>
         <p class="tagline">Smart Journeys, Safe Memories.</p>
         <div class="header-buttons">
           <a href="#contSlider" class="header-cta">Get Started</a>
-          <a href="demo.html" class="header-cta demo-btn">About</a>
+          <a href="#about" class="header-cta demo-btn">About</a>
         </div>
       </div>
     </header>
   
-    <!-- Navigation Bar -->
+    
     <nav>
       <div class="container nav-container">
         <div class="nav-logo">Sangama</div>
         <div class="nav-links">
           <a href="#explore">Explore</a>
-          <a href="#about">About</a>
-          <a href="#explore">Culture</a>          
-          <a href="qs.html">Yatra AI</a>
+          <a href="#about">About</a>         
+          <a href="qs.html">Panda-O-Pedia</a>
         </div>
         <button class="hamburger">
           <i class="fas fa-bars"></i>
@@ -1222,7 +1231,7 @@
       </div>
     </nav>
 
-    <!-- Card Slider for Karnataka Destinations -->
+   
 <section class="section">
   <div  id="contSlider" class="container">
     <div class="section-header">
@@ -1232,27 +1241,27 @@
     
     <div class="card-slider-container">
       <div class="card-slider">
-        <!-- Destination Cards -->
+        
 
         <div class="destination-card">
-          <div class="destination-image" style="background-image: url('images/coorg.png')">
+          <div class="destination-image" style="background-image: url('images/karnataka.png')">
             <div class="destination-number">1</div>
           </div>
           <div class="destination-content">
             <h3>Coorg</h3>
             <p>Misty hills and coffee plantations known as the 'Scotland of India' for its breathtaking landscapes.</p>
-            <a href="#" class="explore-link">Explore <i class="fas fa-arrow-right"></i></a>
+            
           </div>
         </div>
 
         <div class="destination-card">
-          <div class="destination-image" style="background-image: url('images/pondi.png')">
+          <div class="destination-image" style="background-image: url('images/tamilnadu.png')">
             <div class="destination-number">2</div>
           </div>
           <div class="destination-content">
             <h3>Pondicherry</h3>
-          <p>Ancient ruins of the Vijayanagara Empire, a UNESCO World Heritage Site with stunning temple complexes.</p>
-            <a href="#" class="explore-link">Explore <i class="fas fa-arrow-right"></i></a>
+          <p>Where French charm meets Indian soul.</p>
+            
           </div>
         </div>
         
@@ -1262,57 +1271,57 @@
           </div>
           <div class="destination-content">
             <h3>Rajasthan</h3>
-            <p>The second-highest plunge waterfall in India, where the Sharavathi River cascades from 253 meters.</p>
-            <a href="#" class="explore-link">Explore <i class="fas fa-arrow-right"></i></a>
+            <p>Land of kings, forts, and golden sands.</p>
+            
           </div>
         </div>
         
         <div class="destination-card">
-          <div class="destination-image" style="background-image: url('images/jaipur.jpg')">
+          <div class="destination-image" style="background-image: url('images/kerala.jpg')">
             <div class="destination-number">4</div>
           </div>
           <div class="destination-content">
-            <h3>Jaipur</h3>
-            <p>A magnificent example of Indo-Saracenic architecture and one of the most visited attractions in India.</p>
-            <a href="#" class="explore-link">Explore <i class="fas fa-arrow-right"></i></a>
-          </div>
-        </div>
-        
-        <div class="destination-card">
-          <div class="destination-image" style="background-image: url('images/marine\ drive.jpg')">
-            <div class="destination-number">5</div>
-          </div>
-          <div class="destination-content">
-            <h3>Marine drive</h3>
-            <p>Ancient Hindu and Jain temples carved out of sandstone cliffs dating back to the 6th century.</p>
-            <a href="#" class="explore-link">Explore <i class="fas fa-arrow-right"></i></a>
+            <h3>Kerala</h3>
+            <p>God’s own country with serene backwaters.</p>
+            
           </div>
         </div>
         
         <div class="destination-card">
           <div class="destination-image" style="background-image: url('images/rishikesh.jpg')">
-            <div class="destination-number">6</div>
+            <div class="destination-number">5</div>
           </div>
           <div class="destination-content">
-            <h3>Rishikesh</h3>
-            <p>Twin temple towns showcasing the exquisite Hoysala architecture with intricate stone carvings.</p>
-            <a href="#" class="explore-link">Explore <i class="fas fa-arrow-right"></i></a>
+            <h3>Uttarakhand</h3>
+            <p>Mystic mountains and spiritual calm.</p>
+            
           </div>
         </div>
         
         <div class="destination-card">
-          <div class="destination-image" style="background-image: url('images/alleppey.jpg')">
+          <div class="destination-image" style="background-image: url('images/madhya\ pradesh.jpg')">
+            <div class="destination-number">6</div>
+          </div>
+          <div class="destination-content">
+            <h3>Madhya Pradesh</h3>
+            <p>The heart of India, wild and wonderful.</p>
+            
+          </div>
+        </div>
+        
+        <div class="destination-card">
+          <div class="destination-image" style="background-image: url('images/orissa.jpg')">
             <div class="destination-number">7</div>
           </div>
           <div class="destination-content">
-            <h3>Alleppey</h3>
-            <p>A tranquil beach destination with pristine shores and a blend of spiritual heritage and coastal charm.</p>
-            <a href="#" class="explore-link">Explore <i class="fas fa-arrow-right"></i></a>
+            <h3>Orissa</h3>
+            <p>Temples, traditions, and timeless beauty.</p>
+            
           </div>
         </div>
       </div>
       
-      <!-- Slider Navigation -->
+      
       <button class="slider-nav-btn slider-prev" aria-label="Previous destination">
         <i class="fas fa-chevron-left"></i>
       </button>
@@ -1321,7 +1330,7 @@
       </button>
     </div>
     
-    <!-- Slider Pagination Dots -->
+    
     <div class="slider-pagination">
       <div class="slider-dot active"></div>
       <div class="slider-dot"></div>
@@ -1334,7 +1343,7 @@
   </div>
 </section>
   
-    <!-- Features Section -->
+   
     <section id="features" class="section">
       <div class="container">
         <div class="section-header">
@@ -1343,27 +1352,11 @@
         </div>
         <div class="features">
           <div class="feature-card">
-            <img src="images/chatbot.jpg" alt="Multilingual Chatbot" class="feature-img">
-            <div class="feature-content">
-              <h3 class="feature-title">Real-Time Multilingual Safety Chatbot</h3>
-              <p class="feature-description">Get instant safety tips, travel alerts, and local emergency info in your language with our intelligent multilingual chatbot.</p>
-              <a href="#" class="feature-link">Learn more <i class="fas fa-arrow-right"></i></a>
-            </div>
-          </div>
-          <div class="feature-card">
             <img src="images/MAP.jpg" alt="Safety Map" class="feature-img">
             <div class="feature-content">
               <h3 class="feature-title">Color-Coded Safety Map</h3>
               <p class="feature-description">Navigate safely with our dynamic map highlighting areas based on real-time safety ratings — from green (safe) to red (high-risk).</p>
-              <a href="#" class="feature-link">Learn more <i class="fas fa-arrow-right"></i></a>
-            </div>
-          </div>
-          <div class="feature-card">
-            <img src="images/sos.avif" alt="Emergency SOS" class="feature-img">
-            <div class="feature-content">
-              <h3 class="feature-title">Live Location SOS Alerts</h3>
-              <p class="feature-description">Send emergency emails and SMS messages with your live location to trusted contacts in just one tap.</p>
-              <a href="#" class="feature-link">Learn more <i class="fas fa-arrow-right"></i></a>
+              <a href="https://colorcodedmap.streamlit.app/" class="feature-link">Explore <i class="fas fa-arrow-right"></i></a>
             </div>
           </div>
           <div class="feature-card">
@@ -1371,15 +1364,14 @@
             <div class="feature-content">
               <h3 class="feature-title">Quick Emergency Information</h3>
               <p class="feature-description">Access nearby emergency contacts, important rules, and guidelines quickly when you need them most.</p>
-              <a href="#" class="feature-link">Learn more <i class="fas fa-arrow-right"></i></a>
+              <a href="https://emergency-sangama.streamlit.app/" class="feature-link">Explore <i class="fas fa-arrow-right"></i></a>
             </div>
           </div>
         </div>
       </div>
     </section>
     
-     <!-- Explore Section -->
-    <!-- Explore Section -->
+     
 <section id="explore" class="section">
   <div class="container">
     <div class="section-header">
@@ -1392,15 +1384,7 @@
         <div class="feature-content">
           <h3 class="feature-title">Smart Itinerary Planner</h3>
           <p class="feature-description">Get a complete travel plan with suggested places, timings, commute options, and cultural highlights tailored to your preferences.</p>
-          <a href="#" class="feature-link">Discover more <i class="fas fa-arrow-right"></i></a>
-        </div>
-      </div>
-      <div class="feature-card">
-        <img src="images/translator.avif" alt="Real-Time Translation" class="feature-img">
-        <div class="feature-content">
-          <h3 class="feature-title">Real-Time Translation</h3>
-          <p class="feature-description">Break language barriers instantly with on-the-go translation for signs, conversations, and important documents in local dialects.</p>
-          <a href="#" class="feature-link">Discover more <i class="fas fa-arrow-right"></i></a>
+          <a href="https://san-itinerary-planner.streamlit.app/" class="feature-link">Discover more <i class="fas fa-arrow-right"></i></a>
         </div>
       </div>
       <div class="feature-card">
@@ -1408,7 +1392,15 @@
         <div class="feature-content">
           <h3 class="feature-title">AI Day Agent Planner</h3>
           <p class="feature-description">Let our AI agent organize your daily activities, track your pace, and adapt the schedule in real time for a stress-free experience.</p>
-          <a href="#" class="feature-link">Discover more <i class="fas fa-arrow-right"></i></a>
+          <a href="https://sangama-planner.streamlit.app/" class="feature-link">Discover more <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+         <div class="feature-card">
+        <img src="images/translator.avif" alt="Real-Time Translation" class="feature-img">
+        <div class="feature-content">
+          <h3 class="feature-title">Real-Time Translation</h3>
+          <p class="feature-description">Break language barriers instantly with on-the-go translation for signs, conversations, and important documents in local dialects.</p>
+          <a href="https://sangama-translator.streamlit.app/" class="feature-link">Discover more <i class="fas fa-arrow-right"></i></a>     
         </div>
       </div>
     </div>
@@ -1416,7 +1408,7 @@
 </section>
 
 
-    <!-- About Section -->
+
     <section id="about" class="section-alt">
       <div class="container">
         <div class="section-header">
@@ -1425,19 +1417,9 @@
         </div>
         <div class="side-features">
           <div class="side-feature">
-            <i class="fas fa-globe-asia side-feature-icon"></i>
-            <h3 class="side-feature-title">Cultural Diversity</h3>
-            <p class="side-feature-description">Representing the rich tapestry of India's regional cultural variations.</p>
-          </div>
-          <div class="side-feature">
             <i class="fas fa-hiking side-feature-icon"></i>
             <h3 class="side-feature-title">Immersive Journeys</h3>
             <p class="side-feature-description">Creating engaging pathways through India's heritage landscapes.</p>
-          </div>
-          <div class="side-feature">
-            <i class="fas fa-hands side-feature-icon"></i>
-            <h3 class="side-feature-title">Artisan Support</h3>
-            <p class="side-feature-description">Connecting traditional craftspeople with global audiences.</p>
           </div>
           <div class="side-feature">
             <i class="fas fa-book-open side-feature-icon"></i>
@@ -1457,10 +1439,7 @@
         </div>
       </div>
     </section>
-  
-   
-  
-    <!-- Final Call to Action -->
+
     <section class="final-cta">
       <div class="container">
         <h2>Ready to Begin Your Cultural Journey?</h2>
@@ -1472,7 +1451,7 @@
       </div>
     </section>
   
-    <!-- Footer -->
+ 
     <footer>
       <div class="container">
         <div class="copyright">
@@ -1480,223 +1459,137 @@
         </div>
       </div>
     </footer>
+   <script>
+   
+document.addEventListener('DOMContentLoaded', () => {
   
-    <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        const cards = document.querySelectorAll('.destination-card');
-        const prevBtn = document.querySelector('.slider-prev');
-        const nextBtn = document.querySelector('.slider-next');
-        let currentIndex = 0;
-        const visibleCount = 3; // Always show 3 cards
-        let autoSlideInterval;
-        const slideDelay = 2500;
+  const cards = document.querySelectorAll('.destination-card');
+  const sliderContainer = document.querySelector('.card-slider-container');
+  const prevBtn = document.querySelector('.slider-prev');
+  const nextBtn = document.querySelector('.slider-next');
+  
+  
+  const autoSlideDelay = 2500;
+  
+  let currentIndex = 0;
+  let autoSlideInterval;
+  let touchStartX = 0;
+  
+  
+  function updateVisibleCards() {
+    
+    cards.forEach(card => {
+      card.style.display = 'none';
+      card.classList.remove('active', 'left-card', 'right-card');
+    });
+    
+   
+    const totalCards = cards.length;
+    const prevIndex = (currentIndex - 1 + totalCards) % totalCards;
+    const nextIndex = (currentIndex + 1) % totalCards;
+   
+    cards[prevIndex].style.display = 'block';
+    cards[prevIndex].classList.add('left-card');
+    
+    cards[currentIndex].style.display = 'block';
+    cards[currentIndex].classList.add('active');
+    
+    cards[nextIndex].style.display = 'block';
+    cards[nextIndex].classList.add('right-card');
+  }
+  
+
+  function goToNext() {
+    currentIndex = (currentIndex + 1) % cards.length;
+    updateVisibleCards();
+  }
+  
+  function goToPrev() {
+  currentIndex = (currentIndex - 1 + cards.length) % cards.length;
+  updateVisibleCards();
+}
+  
+  
+  function startAutoSlide() {
+    autoSlideInterval = setInterval(goToNext, autoSlideDelay);
+  }
+  
+  function stopAutoSlide() {
+    clearInterval(autoSlideInterval);
+  }
+  
+  function resetAutoSlide() {
+    stopAutoSlide();
+    startAutoSlide();
+  }
+  
+  
+  prevBtn.addEventListener('click', () => {
+    goToPrev();
+    resetAutoSlide();
+  });
+  
+  nextBtn.addEventListener('click', () => {
+    goToNext();
+    resetAutoSlide();
+  });
+
+  sliderContainer.addEventListener('mouseenter', stopAutoSlide);
+  sliderContainer.addEventListener('mouseleave', startAutoSlide);
+  
+
+  sliderContainer.addEventListener('touchstart', (e) => {
+    stopAutoSlide();
+    touchStartX = e.touches[0].clientX;
+  });
+  
+  sliderContainer.addEventListener('touchend', (e) => {
+    const touchEndX = e.changedTouches[0].clientX;
+    const swipeDiff = touchEndX - touchStartX;
+    
+    if (swipeDiff > 50) {
+      goToPrev(); 
+    } else if (swipeDiff < -50) {
+      goToNext(); 
+    }
+    
+    startAutoSlide();
+  });
+  
+
+  updateVisibleCards();
+  startAutoSlide();
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  
+  const hamburger = document.querySelector('.hamburger');
+  const navLinks = document.querySelector('.nav-links');
+  
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+  
+
+  document.addEventListener('click', (event) => {
+    if (!event.target.closest('.nav-container')) {
+      navLinks.classList.remove('active');
+    }
+  });
+  
+
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
       
-        function updateVisibleCards() {
-          cards.forEach((card, index) => {
-            card.classList.remove('active', 'left-card', 'right-card');
-            card.style.display = 'none';
-          });
-      
-          const total = cards.length;
-          const prevIndex = (currentIndex - 1 + total) % total;
-          const nextIndex = (currentIndex + 1) % total;
-      
-          cards[prevIndex].style.display = 'block';
-          cards[prevIndex].classList.add('left-card');
-      
-          cards[currentIndex].style.display = 'block';
-          cards[currentIndex].classList.add('active');
-      
-          cards[nextIndex].style.display = 'block';
-          cards[nextIndex].classList.add('right-card');
-        }
-      
-        function goToNext() {
-          currentIndex = (currentIndex + 1) % cards.length;
-          updateVisibleCards();
-        }
-      
-        function goToPrev() {
-          currentIndex = (currentIndex - 1 + cards.length) % cards.length;
-          updateVisibleCards();
-        }
-      
-        function startAutoSlide() {
-          autoSlideInterval = setInterval(goToNext, slideDelay);
-        }
-      
-        function stopAutoSlide() {
-          clearInterval(autoSlideInterval);
-        }
-      
-        // Button controls
-        prevBtn.addEventListener('click', () => {
-          goToPrev();
-          stopAutoSlide();
-          startAutoSlide();
-        });
-      
-        nextBtn.addEventListener('click', () => {
-          goToNext();
-          stopAutoSlide();
-          startAutoSlide();
-        });
-      
-        // Pause on hover
-        const sliderContainer = document.querySelector('.card-slider-container');
-        sliderContainer.addEventListener('mouseenter', stopAutoSlide);
-        sliderContainer.addEventListener('mouseleave', startAutoSlide);
-      
-        // Touch swipe detection (basic)
-        let startX = 0;
-        sliderContainer.addEventListener('touchstart', (e) => {
-          stopAutoSlide();
-          startX = e.touches[0].clientX;
-        });
-      
-        sliderContainer.addEventListener('touchend', (e) => {
-          let endX = e.changedTouches[0].clientX;
-          if (startX - endX > 50) {
-            goToNext();
-          } else if (endX - startX > 50) {
-            goToPrev();
-          }
-          startAutoSlide();
-        });
-      
-        updateVisibleCards();
-        startAutoSlide();
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth'
       });
-      </script>
-      
-      <script>
-        document.addEventListener('DOMContentLoaded', () => {
-          const cards = document.querySelectorAll('.destination-card');
-          const container = document.querySelector('.card-slider-container');
-          const prevBtn = document.querySelector('.slider-prev');
-          const nextBtn = document.querySelector('.slider-next');
-          let currentIndex = 0;
-          const autoPlayDelay = 2500;
-          let autoPlayInterval;
-        
-          // Initialize: show 3 cards (prev, current, next)
-          function updateCards() {
-            cards.forEach((card, index) => {
-              card.style.display = 'none';
-              card.classList.remove('active', 'left-card', 'right-card');
-            });
-        
-            const total = cards.length;
-            const prev = (currentIndex - 1 + total) % total;
-            const next = (currentIndex + 1) % total;
-        
-            cards[prev].style.display = 'block';
-            cards[prev].classList.add('left-card');
-        
-            cards[currentIndex].style.display = 'block';
-            cards[currentIndex].classList.add('active');
-        
-            cards[next].style.display = 'block';
-            cards[next].classList.add('right-card');
-          }
-        
-          function goNext() {
-            currentIndex = (currentIndex + 1) % cards.length;
-            updateCards();
-          }
-        
-          function goPrev() {
-            currentIndex = (currentIndex - 1 + cards.length) % cards.length;
-            updateCards();
-          }
-        
-          function startAutoplay() {
-            autoPlayInterval = setInterval(goNext, autoPlayDelay);
-          }
-        
-          function stopAutoplay() {
-            clearInterval(autoPlayInterval);
-          }
-        
-          // Hover, click, swipe handlers
-          container.addEventListener('mouseenter', (e) => {
-            stopAutoplay();
-            console.log(e.type + ' detected');
-          });
-        
-          container.addEventListener('mouseleave', (e) => {
-            startAutoplay();
-            console.log(e.type + ' detected');
-          });
-        
-          container.addEventListener('click', (e) => {
-            stopAutoplay();
-            console.log(e.type + ' detected');
-          });
-        
-          // Mobile swipe detection
-          let startX = 0;
-          container.addEventListener('touchstart', (e) => {
-            stopAutoplay();
-            startX = e.touches[0].clientX;
-          });
-        
-          container.addEventListener('touchend', (e) => {
-            const endX = e.changedTouches[0].clientX;
-            const diff = endX - startX;
-            if (diff > 50) goPrev(); // swipe right
-            else if (diff < -50) goNext(); // swipe left
-            startAutoplay();
-            console.log('swipe detected');
-          });
-        
-          // Navigation buttons
-          prevBtn.addEventListener('click', () => {
-            goPrev();
-            stopAutoplay();
-          });
-        
-          nextBtn.addEventListener('click', () => {
-            goNext();
-            stopAutoplay();
-          });
-        
-          updateCards();
-          startAutoplay();
-        });
-        </script>
-        
-      
-      
-    <script>
-    // Toggle mobile menu
-      const hamburger = document.querySelector('.hamburger');
-      const navLinks = document.querySelector('.nav-links');
-      
-      hamburger.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-      });
-      
-      // Close menu when clicking outside
-      document.addEventListener('click', (event) => {
-        if (!event.target.closest('.nav-container')) {
-          navLinks.classList.remove('active');
-        }
-      });
-      
-      // Smooth scrolling for anchor links
-      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-          e.preventDefault();
-          
-          document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-          });
-          
-          // Close mobile menu after clicking
-          navLinks.classList.remove('active');
-        });
-      });
-    </script>
+   
+      navLinks.classList.remove('active');
+    });
+  });
+});
+   </script>
   </body>
   </html>
